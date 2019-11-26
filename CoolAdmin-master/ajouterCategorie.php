@@ -48,15 +48,15 @@ include 'inc/header.php';
                         <label for="text-input" class=" form-control-label">Nom Categorie</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="nom" name="nom" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">Ajouter un nom de Categorie</small>
+                                <input type="text" id="nom" name="nom" placeholder="Text" class="form-control" >
+                        <small id="err" class="form-text ">Ajouter un nom de Categorie</small>
                     </div>
                 </div>
                 <div style="margin-left: 530px;" >
                     <button type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-dot-circle-o"></i> Submit
                     </button>
-                    <button type="reset" class="btn btn-danger btn-sm" >
+                    <button type="reset" class="btn btn-danger btn-sm" id="my" onclick="reset()">
                         <i class="fa fa-ban"></i> Reset
                     </button>
                 </div>

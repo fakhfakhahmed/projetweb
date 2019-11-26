@@ -120,9 +120,16 @@ class fonctionC
             die('Erreur: '.$e->getMessage());
         }
     }
-    function modifierProduit($id_produit,$nom,$prix,$description,$id_categorie,$stock,$img_1,$key_word)
+    function modifierProduit($id_produit,$nom,$prix,$description,$id_categorie,$stock,$key_word,$img_1=null)
     {
-        $sql="update sisagri2.produits set nom='$nom', prix='$prix', description='$description',id_categorie='$id_categorie',key_word='$key_word',img_1='$img_1',stock='$stock' where id_produit='$id_produit'";
+        if ($img_1==null)
+        {
+            $sql="update sisagri2.produits set nom='$nom', prix='$prix', description='$description',id_categorie='$id_categorie',key_word='$key_word',stock='$stock' where id_produit='$id_produit'";
+        }
+    else
+        {
+            $sql="update sisagri2.produits set nom='$nom', prix='$prix', description='$description',id_categorie='$id_categorie',key_word='$key_word',stock='$stock',img_1='$img_1' where id_produit='$id_produit'";
+        }
         $db = config::getConnexion();
         try
         {

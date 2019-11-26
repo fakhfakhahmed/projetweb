@@ -36,21 +36,21 @@ $listorod=$prod->afficherProduit();
 </section>
 
 
-<div class="col-lg-9">
-    <div class="container-fluid table100 ver2 m-b-110">
+<div class="col-lg-">
+    <div class="table-responsive table100 ver2 ">
         <table class="table table-borderless table-striped table-earning"  style="margin-left: 70px;">
             <thead>
             <tr>
                 <th>Ref</th>
                 <th>nom</th>
                 <th>prix</th>
-                <th> descriptionm </th>
+                <th> description </th>
                 <th class="text-right">categorie</th>
                 <th class="text-right">stock</th>
                 <th>Image</th>
                 <th> key word</th>
-                <th></th>
-                <th></th>
+                <th>editer</th>
+                <th>supprimer</th>
 
             </tr>
             </thead>
@@ -59,14 +59,14 @@ $listorod=$prod->afficherProduit();
             $x=1;
             foreach ($listorod as $row){
                 $listcat=$prod->afficherCategorie();
-                echo ' <tr>
+                echo ' <tr style="">
                 <td> '.$x.'</td>
                 <td> '.$row["nom"].'</td>
                 <td> '.$row["prix"].'</td>
-                <td> '.$row["description"].'</td>
+                <td class="desccc"> '.$row["description"].'</td>
                 <td> '.$row["id_categorie"].'</td>
                 <td> '.$row["stock"].'</td>
-                <td> <img class="rounded-circle"  src="images/'.$row["img_1"].'"></td>
+                <td> <img class="rounded-circle" width="50px" src="images/'.$row["img_1"].'"></td>
                 <td> '.$row["key_word"].'</td>
                 
             
@@ -84,7 +84,7 @@ $listorod=$prod->afficherProduit();
                                                 <span aria-hidden="true">&times;</span>
                                               </button>
                                             </div>
-                                            <form action="modifierProduit.php" method="post">
+                                            <form enctype="multipart/form-data" action="modifierProduit.php" method="post">
                                               <div class="modal-body mx-3">
                                               
                                               <div class="md-form mb-5">
@@ -125,7 +125,7 @@ $listorod=$prod->afficherProduit();
                                                                                        
                                                 <div class="md-form mb-4">
                                                    <label data-error="wrong" data-success="right" for="orangeForm-pass">Image Produit</label>
-                                                   <input type="file" id="orangeForm-pass" name="img_1" class="form-control validate" value="">
+                                                   <input type="file" id="orangeForm-pass" name="t6" class="form-control validate" value="'.$row["img_1"].'">
                                                  </div>
                                                  
                                                   <div class="md-form mb-5">

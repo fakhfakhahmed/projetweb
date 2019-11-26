@@ -16,7 +16,7 @@ if(isset($_POST["t1"]) and isset($_POST["t2"]) and isset($_POST["t3"]) and isset
     $invC->ajouterProduit($_POST["t1"],$_POST["t2"],$_POST["t3"],$_POST["t4"],$_POST["t5"],$Filename,$_POST["t7"]);
     echo "Produit ajouter avec succes";
 
-// header("location:afficherProduit.php");
+ header("location:afficherProduit.php");
 }
 else
 {

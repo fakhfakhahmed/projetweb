@@ -2128,7 +2128,12 @@ section {
     transition: all 0.5s ease;
     z-index: 1000;
 }
-
+.desccc
+{
+    text-overflow: ellipsis;
+    max-width: 250px;
+    overflow: hidden;
+}
 .menu-sidebar2 .logo {
     height: 75px;
     display: -webkit-box;

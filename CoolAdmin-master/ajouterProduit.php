@@ -114,7 +114,7 @@ $lc=$c->afficherCategorie();
                         <label for="file-input" class=" form-control-label">image</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="file" id="img" name="t6" value="images/1.jpg">
+                        <input type="file" id="img" name="t6" value="">
                         <small class="form-text text-muted">Ajouter Image de Produit</small>
                     </div>
                 </div>
