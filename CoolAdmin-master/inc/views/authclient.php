@@ -1,9 +1,9 @@
 <?PHP
 include "../client.php";
-include "../fonctionc.php";
+include "../fonctionC.php";
 
 if (isset($_POST['email']) AND isset($_POST['pass'])){
-$client=new client(NULL,NULL,NULL,$_POST['pass'],$_POST['email'],NULL);
+$client=new client('aa','aa','aa',$_POST['pass'],$_POST['email'],'aa');
 
 $fonctionc=new fonctionc();
 

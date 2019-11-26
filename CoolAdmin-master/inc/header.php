@@ -76,6 +76,11 @@
                             <i class="fas fa-chart-bar"></i>Inbox</a>
                         <span class="inbox-num">3</span>
                     </li>
+                    <li>
+                        <a href="afficherclient.php">
+                            <i class="fas fa-user"></i>client</a>
+                      
+                    </li>
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">

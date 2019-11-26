@@ -11,7 +11,7 @@
 		</div>
 		<!-- Contact Form Area -->
 		<div class="contact-form-area">
-			<form action="#" method="post">
+
 				<div class="row">
 					<div class="col-12">
 						<input type="email" class="form-control" name="email" placeholder="Your email" required>
@@ -26,7 +26,7 @@
 						<button type="submit" class="btn famie-btn">Sign in</button>
 					</div>
 				</div>
-			</form>
+		
 		</div>
 	</div>
 </div>

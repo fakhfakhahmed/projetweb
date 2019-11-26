@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <!-- Title -->
-  <title>Famie - Farm Services &amp; Organic Food Store Template | Home</title>
+  <title>Sisagri - Farm Services  </title>
   <!-- Favicon -->
-  <link rel="icon" href="img/core-img/favicon.ico">
+  <link rel="icon" href="img/core-img/logo.png">
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
@@ -88,7 +88,7 @@
                       <li><a href="contact.php">Contact</a></li>
                     </ul>
                   </li>
-                  <li><a href="our-product.php">Our Product</a></li>
+                  <li><a href="shop.php">Our Product</a></li>
                   <li><a href="farming-practice.php">Farming Practice</a></li>
                   <li><a href="#">Client</a>
                     <ul class="dropdown">

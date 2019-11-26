@@ -140,6 +140,67 @@ class fonctionC
             die('Erreur: '.$e->getMessage());
         }
     }
+    function ajouterclient($client)
+	{
+        $username=$client->getusername();
+        $nom=$client->getNom();
+        $prenom=$client->getPrenom();
+        $mdp=$client->getmdp();
+        $email=$client->getemail();
+        $tel=$client->gettel();
+
+				$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+				mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+				$sql="INSERT INTO client (username, nom, prenom,email , mdp,tel) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel')";
+
+				$req=mysqli_query($host,$sql);
+				if($req)
+				{
+					echo 'added';
+
+				}
+				else
+				{
+					echo 'mail invalid';
+				}
+}
+
+
+
+
+	function supprimerclient($client)
+	{
+				$username=$client->getusername();
+
+
+				$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+				mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+				$sql="DELETE FROM `client` WHERE `client`.`username` = '$username'";
+
+				$req=mysqli_query($host,$sql);
+
+
+
+	}
+
+	function bloquerclient($client,$etat)
+	{
+				$email=$client->getemail();
+
+
+				$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+				mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+				$sql="UPDATE `client` SET `etat` = '$etat' WHERE `client`.`email` = '$email';";
+
+ 			 $req=mysqli_query($host,$sql);
+
+
+
+	}
 
 }
 
