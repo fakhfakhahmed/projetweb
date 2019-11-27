@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/48d6aead40d9964f7e46f4a30e5fcdcc.jpg" afterDir="false" />
+    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="aaa">
+      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/70462450_172839893904171_1238296057062883328_n.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/afficherproduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/afficherproduit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoolAdmin-master/ajouterCategorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/ajouterCategorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/ajoutprod.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/ajoutprod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/modifierProduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/modifierProduit.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +38,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="sers" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sers" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sers" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="categories: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sers" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="produits: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -140,7 +114,11 @@
       <workItem from="1574699201820" duration="349000" />
       <workItem from="1574699569504" duration="78000" />
       <workItem from="1574720615107" duration="14000" />
-      <workItem from="1574757585489" duration="7266000" />
+      <workItem from="1574757585489" duration="7353000" />
+      <workItem from="1574796363525" duration="1170000" />
+      <workItem from="1574848269965" duration="519000" />
+      <workItem from="1574851455824" duration="75000" />
+      <workItem from="1574875578059" duration="4443000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
@@ -149,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574699593814</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aaa">
+      <created>1574765982524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574765982524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

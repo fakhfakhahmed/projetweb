@@ -49,7 +49,7 @@ include 'inc/header.php';
                     </div>
                     <div class="col-12 col-md-9">
                                 <input type="text" id="nom" name="nom" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter un nom de Categorie</small>
+                        <small id="err" class="form-text">Ajouter un nom de Categorie</small>
                     </div>
                 </div>
                 <div style="margin-left: 530px;" >

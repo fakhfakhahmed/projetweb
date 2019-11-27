@@ -17,8 +17,7 @@ function verif() {
 }
 function reset() {
     document.getElementById("err").innerHTML="Ajouter un nom de Categorie";
-    document.getElementById("err").classList.remove("text-danger")
-
+    document.getElementById("err").classList.remove("text-danger");
     c.classList.remove("is-invalid");
 
 }
