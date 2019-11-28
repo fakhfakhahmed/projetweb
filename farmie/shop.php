@@ -121,7 +121,7 @@
                 <div class="product-thumbnail">
                   <img style="width: 500px; height: 300px;" src="'.'../CoolAdmin-master/images/'.$row["img_1"].'" alt="">
                   <!-- Product Tags -->
-                  <span class="product-tags">Hot</span>
+                  <span class="product-tags">SALE</span>
                   <!-- Product Meta Data -->
                   <div class="product-meta-data">
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>

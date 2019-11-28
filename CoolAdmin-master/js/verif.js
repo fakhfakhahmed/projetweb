@@ -1,12 +1,14 @@
 function verif() {
     c=document.getElementById('nom');
+    c1=document.getElementById('Prix');
+    c2=document.getElementById('nomP');
 
 
 
     if (c.value ==""){
 
-        document.getElementById("err").innerHTML="tu doit";
-        document.getElementById("err").classList.add("text-danger")
+        document.getElementById("err").innerHTML="le champ catego est  obli";
+        document.getElementById("err").classList.add("text-danger");
 
         c.classList.add("is-invalid");
         return false;
@@ -14,10 +16,26 @@ function verif() {
     else {
         alert('ajouter avec  succes');
     }
+
+
 }
-function reset() {
-    document.getElementById("err").innerHTML="Ajouter un nom de Categorie";
-    document.getElementById("err").classList.remove("text-danger");
-    c.classList.remove("is-invalid");
+function test() {
+    c1=document.getElementById('prix');
+    c2=document.getElementById('nom');
+    if (c2.value ==""){
+
+      alert('le champ nom est obligatoire');
+
+    }
+
+if (c1.valueOf()==""){
+    alert("le champ prix est oblig");
+    return false;
+
+
+}
+else {
+    alert('ajouter avec  succes');
+}
 
 }

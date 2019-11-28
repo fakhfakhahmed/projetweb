@@ -38,7 +38,7 @@ $lc=$c->afficherCategorie();
             <strong>Ajouter</strong> Produit
         </div>
         <div class="card-body card-block">
-            <form action="ajoutprod.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="ajoutprod.php" method="post" enctype="multipart/form-data" class="form-horizontal" onsubmit="return test()">
 
                 <div class="row form-group">
                     <div class="col col-md-3">
@@ -76,7 +76,7 @@ $lc=$c->afficherCategorie();
                     </div>
                     <div class="col-12 col-md-9">
                         <input type="text" id="nom" name="t2" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">Ajouter un nom de Produit</small>
+                        <small id="err" class="form-text ">Ajouter un nom de Produit</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -84,8 +84,8 @@ $lc=$c->afficherCategorie();
                         <label for="text-input" class=" form-control-label">Prix</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="Prix" name="t3" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">Ajouter Prix de Produit</small>
+                        <input type="text" id="prix" name="t3" placeholder="Text" class="form-control">
+                        <small id="err" class="form-text text-muted">Ajouter Prix de Produit</small>
                     </div>
                 </div>
 
