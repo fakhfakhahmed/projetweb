@@ -1,13 +1,12 @@
 function verif() {
     c=document.getElementById('nom');
-    c1=document.getElementById('Prix');
-    c2=document.getElementById('nomP');
+
 
 
 
     if (c.value ==""){
 
-        document.getElementById("err").innerHTML="le champ catego est  obli";
+        document.getElementById("err").innerHTML="le champ catego est  obligatoire";
         document.getElementById("err").classList.add("text-danger");
 
         c.classList.add("is-invalid");
@@ -21,19 +20,26 @@ function verif() {
 }
 function test() {
     c1=document.getElementById('prix');
-    c2=document.getElementById('nom');
-    if (c2.value ==""){
+    c2=document.getElementById('nomp');
+    if (c1.value ==""){
 
-      alert('le champ nom est obligatoire');
+
+      document.getElementById('er').innerHTML="le champ prix est obligatoire";
+      document.getElementById('er').classList.add("text-danger");
+        c1.classList.add("is-invalid");
+
+        return false;
 
     }
+   else  if(c2==""){
 
-if (c1.valueOf()==""){
-    alert("le champ prix est oblig");
-    return false;
+        document.getElementById('errr').innerHTML="le champ nom est obligatoire";
+        document.getElementById('errr').classList.add("text-danger");
+        c2.classList.add("is-invalid");
+        return false;
+    }
 
 
-}
 else {
     alert('ajouter avec  succes');
 }

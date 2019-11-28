@@ -1,4 +1,13 @@
-  <?php include'header.php';
+<?php
+
+session_start();
+if(isset($_SESSION['email']))
+{include'headerc.php';}
+else{include'header.php';
+
+}
+
+
   include '../CoolAdmin-master/inc/fonctionC.php';
 //  include '../CoolAdmin-master/inc/categorieC.php';
   $prod=new fonctionC();

@@ -75,8 +75,8 @@ $lc=$c->afficherCategorie();
                         <label for="text-input" class=" form-control-label">Nom Produit</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input type="text" id="nom" name="t2" placeholder="Text" class="form-control">
-                        <small id="err" class="form-text ">Ajouter un nom de Produit</small>
+                        <input type="text" id="nomp" name="t2" placeholder="Text" class="form-control">
+                        <small id="errr" class="form-text ">Ajouter un nom de Produit</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -85,7 +85,7 @@ $lc=$c->afficherCategorie();
                     </div>
                     <div class="col-12 col-md-9">
                         <input type="text" id="prix" name="t3" placeholder="Text" class="form-control">
-                        <small id="err" class="form-text text-muted">Ajouter Prix de Produit</small>
+                        <small id="er" class="form-text">Ajouter Prix de Produit</small>
                     </div>
                 </div>
 
