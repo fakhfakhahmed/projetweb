@@ -10,7 +10,6 @@ $fonctionc=new fonctionc();
 $fonctionc->autheclient($client);
 
 
-
 }
 else{
 	echo "vérifier les champs";

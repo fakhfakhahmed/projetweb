@@ -78,8 +78,13 @@
                     </li>
                     <li>
                         <a href="afficherclient.php">
-                            <i class="fas fa-user"></i>client</a>
-                      
+                            <i class="fas fa-users"></i>client</a>
+
+                    </li>
+                    <li>
+                        <a href="afficheradmin.php">
+                            <i class="fas fa-user"></i>admin</a>
+
                     </li>
 
                     <li class="has-sub">

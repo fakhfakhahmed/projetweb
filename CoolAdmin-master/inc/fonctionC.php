@@ -140,7 +140,7 @@ class fonctionC
             die('Erreur: '.$e->getMessage());
         }
     }
-    function ajouterclient($client)
+    function ajouteradmin($client)
 	{
         $username=$client->getusername();
         $nom=$client->getNom();
@@ -151,7 +151,7 @@ class fonctionC
 
 				$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
 				mysqli_select_db($host,"sisagri2")or die("cannot select DB");
-				$sql="INSERT INTO client (username, nom, prenom,email , mdp,tel) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel')";
+				$sql="INSERT INTO admin (username, nom, prenom,email , mdp,tel) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel')";
 
 				$req=mysqli_query($host,$sql);
 				if($req)

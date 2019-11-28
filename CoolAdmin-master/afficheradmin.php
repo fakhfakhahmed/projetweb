@@ -7,7 +7,7 @@ include 'inc/header.php';
 
 
 
-		$sql="select * from client  ";
+		$sql="select * from admin  ";
 
 		$req=mysqli_query($host,$sql);
 
@@ -25,13 +25,16 @@ include 'inc/header.php';
                             <span class="au-breadcrumb-span">You are here:</span>
                             <ul class="list-unstyled list-inline au-breadcrumb__list">
                                 <li class="list-inline-item active">
-                                    <a href="#">Clients</a>
+                                    <a href="#">Admins</a>
                                 </li>
 
 
                             </ul>
                         </div>
-
+                        <form method="post" action="ajouteradmin.php">
+                        <button  type="submit" class="au-btn au-btn-icon au-btn--green">
+                            <i class="zmdi zmdi-plus"></i>Ajouter Admin </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -50,15 +53,13 @@ include 'inc/header.php';
             		<th>prénom</th>
             		<th>email</th>
             		<th>numéro telephone</th>
-            		<th>etat</th>
-                <th>supprimer</th>
-                <th>bloquer/debloquer</th>
+
               </tr>
             </thead>
             <tbody>
               <?php
                   while($row=mysqli_fetch_array($req,MYSQLI_NUM))
-                    {if($row[6]==0){$faza="bloquer";}else{$faza='debloquer';}
+                    {
               				echo'
                       <tr>
                         <td>'. $row[0].'</td>
@@ -67,20 +68,7 @@ include 'inc/header.php';
 
                         <td>'. $row[4].'</td>
                         <td>'. $row[5].'</td>
-                        <td>'. $row[6].'</td>
-                              <td> <form action="inc/views/supprimerclient.php" method="get">
-                                        <input type="hidden" id="username" name="username" value="'.$row["0"].'">
-                                        <input class="au-btn au-btn-icon au-btn--green" type="submit" value="supprimer">
-                                    </form></td>
 
-              											<td> <form action="inc/views/bloquerclient.php" method="get">
-
-              			                          <input type="hidden" id="email" name="email" value="'.$row["4"].'">
-
-              																<input type="hidden" id="etat" name="etat" value="'.$row["6"].'">
-
-              			                          <input class="au-btn au-btn-icon au-btn--green" type="submit" value='.$faza.'>
-              			                      </form></td>
 
                       </tr>';
                     }

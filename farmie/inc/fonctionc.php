@@ -48,13 +48,46 @@ class fonctionc
 
 		if ((mysqli_num_rows($req)==1))
 		 {echo'connected';
+       session_start();
+			 $_SESSION['email']=$email;
+			 $_SESSION['password']=$mdp;
+			 header('Location: ../../index.php');
+
+
+
 		 }
 
 		 elseif((mysqli_num_rows($req1)==1)){
 			 echo'bloquer';
+
 		 }
-		 else{echo'invalide';}
+		 else{echo'invalide';
+
+		 }
 
 	}
+
+	function modifierclient($client,$hethi)
+	{
+
+
+				$mdp=$client->getmdp();
+
+				$tel=$client->gettel();
+
+				$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+				mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+				$sql="UPDATE `client` SET  `mdp` = '$mdp' WHERE `client`.`email` = '$hethi';
+;";
+
+				$req=mysqli_query($host,$sql);
+
+
+
+	}
+
 }
 	?>
