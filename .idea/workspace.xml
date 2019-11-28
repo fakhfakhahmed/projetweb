@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmie/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/shop.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +116,7 @@
       <workItem from="1574848269965" duration="519000" />
       <workItem from="1574851455824" duration="75000" />
       <workItem from="1574875578059" duration="9047000" />
-      <workItem from="1574929834375" duration="10368000" />
+      <workItem from="1574929834375" duration="10707000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574955287565</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chqnge">
+      <created>1574956806499</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574956806499</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

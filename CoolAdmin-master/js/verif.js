@@ -31,7 +31,7 @@ function test() {
         return false;
 
     }
-   else  if(c2==""){
+   else  if(c2.value==""){
 
         document.getElementById('errr').innerHTML="le champ nom est obligatoire";
         document.getElementById('errr').classList.add("text-danger");
