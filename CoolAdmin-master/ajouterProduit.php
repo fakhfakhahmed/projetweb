@@ -97,6 +97,7 @@ $lc=$c->afficherCategorie();
                     </div>
                     <div class="col-12 col-md-9">
                         <textarea name="t4" id="Desc" rows="9" placeholder="Content..." class="form-control"></textarea>
+                        <small id="errrr" class="form-text">Ajouter Description de Produit</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -105,7 +106,7 @@ $lc=$c->afficherCategorie();
                     </div>
                     <div class="col-12 col-md-9">
                         <input type="text" id="stock" name="t5" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">Ajouter Stock de Produit</small>
+                        <small id="errrrr" class="form-text ">Ajouter Stock de Produit</small>
                     </div>
                 </div>
 
@@ -124,7 +125,7 @@ $lc=$c->afficherCategorie();
                     </div>
                     <div class="col-12 col-md-9">
                         <input type="text" id="keyword" name="t7" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">Ajouter KeyWords de Produit</small>
+                        <small id="errrrrr" class="form-text ">Ajouter KeyWords de Produit</small>
                     </div>
                 </div>
                 <div style="margin-left: 530px;" >
