@@ -54,7 +54,7 @@ function test() {
     }
     if(c3.value=="")
     {
-        document.getElementById('errrr').innerHTML="le champ prix est obligatoire";
+        document.getElementById('errrr').innerHTML="le champ Description est obligatoire";
         document.getElementById('errrr').classList.add("text-danger");
         c3.classList.add("is-invalid");
         return false;
@@ -68,7 +68,7 @@ function test() {
 
       if(c4.value=="")
      {
-         document.getElementById('errrrr').innerHTML="le champ prix est obligatoire";
+         document.getElementById('errrrr').innerHTML="le champ Stock est obligatoire";
          document.getElementById('errrrr').classList.add("text-danger");
          c4.classList.add("is-invalid");
          return false;
@@ -80,7 +80,7 @@ function test() {
       }
       if(c5.value=="")
      {
-         document.getElementById('errrrrr').innerHTML="le champ prix est obligatoire";
+         document.getElementById('errrrrr').innerHTML="le champ keyword est obligatoire";
          document.getElementById('errrrrr').classList.add("text-danger");
          c5.classList.add("is-invalid");
          return false;
