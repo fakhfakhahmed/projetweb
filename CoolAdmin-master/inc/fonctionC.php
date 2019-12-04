@@ -201,6 +201,22 @@ class fonctionC
 
 
 	}
+    function afficherSelon($cate)
+   {
+
+        $sql="select * from produits where id_categorie = '$cate'  ";
+
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
 
 }
 

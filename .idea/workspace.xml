@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="" />
+    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/afficheCatS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/11350529_10204455001759199_3625012926642152678_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/c--logo-icon-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/afficheselon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/afficheCategorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/afficheCategorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/ajouterProduit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/js/verif.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/shop.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +44,19 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="sers" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="produits: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -115,6 +139,13 @@
       <workItem from="1574851455824" duration="75000" />
       <workItem from="1574875578059" duration="9047000" />
       <workItem from="1574929834375" duration="12610000" />
+      <workItem from="1574960466222" duration="83000" />
+      <workItem from="1574975749490" duration="1177000" />
+      <workItem from="1575016901547" duration="1509000" />
+      <workItem from="1575073610662" duration="600000" />
+      <workItem from="1575400811321" duration="2849000" />
+      <workItem from="1575411876778" duration="3149000" />
+      <workItem from="1575477850178" duration="4442000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
@@ -165,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574958858272</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="badelt js ya jme3a">
+      <created>1574960532429</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574960532429</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
