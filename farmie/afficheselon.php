@@ -97,7 +97,7 @@ $listselon=$prod->afficherSelon($cate);
                     <h5 class="widget-title">Catagories</h5>
 
                     <ul>
-                        <li><a href="#">all Products</a></li>
+                        <li><a href="shop.php">all Products</a></li>
                         <?php
 
                         foreach ($listcat as $cat)
