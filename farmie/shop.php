@@ -5,7 +5,9 @@ if(isset($_SESSION['email']))
 {include'headerc.php';}
 else{include'header.php';
 
+
 }
+
 
 
   include '../CoolAdmin-master/inc/fonctionC.php';
@@ -13,6 +15,9 @@ else{include'header.php';
   $prod=new fonctionC();
   $listorod=$prod->afficherProduit();
   $listcat=$prod->afficherCategorie();
+
+
+
   ?>
   <!-- ##### Header Area End ##### -->
 
@@ -91,15 +96,22 @@ else{include'header.php';
           <div class="single-widget-area">
             <!-- Title -->
             <h5 class="widget-title">Catagories</h5>
+
               <ul>
-                  <li><a href="#">all Products</a></li>
+                  <li><a href="shop.php">all Products</a></li>
                   <?php
+
                   foreach ($listcat as $cat)
                   {
-                      echo '<li><a href="#">'.$cat["nom_cat"].'</a></li>';
+
+                      echo '  <li><a href="afficheselon.php?cat='.$cat["id_categorie"].'">'; echo' '.$cat["nom_cat"].' 
+                  </a></li>';
                   }
+
+
                   ?>
               </ul>
+
             <!-- Cata List -->
 
 
@@ -120,34 +132,37 @@ else{include'header.php';
             <!-- Single Product Area -->
               <?php
 
-              foreach ($listorod as $row)
-              {
 
-                  echo '
+                  foreach ($listorod as $row) {
+
+                      echo '
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="single-product-area mb-50">
                 <!-- Product Thumbnail -->
                 <div class="product-thumbnail">
-                  <img style="width: 500px; height: 300px;" src="'.'../CoolAdmin-master/images/'.$row["img_1"].'" alt="">
+                  <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" alt="">
                   <!-- Product Tags -->
                   <span class="product-tags">SALE</span>
                   <!-- Product Meta Data -->
                   <div class="product-meta-data">
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
+                    <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
                   </div>
                 </div>
                 <!-- Product Description -->
                 
                 <div class="product-desc text-center pt-4">
-                  <a href="#" class="product-title">'.$row["nom"].'</a>
-                  <h6 class="price">'.$row["prix"].' DNT</h6>
+                  <a href="#" class="product-title">' . $row["nom"] . '</a>
+                  <h6 class="price">' . $row["prix"] . ' DNT</h6>
                 </div>
               </div>
             </div>
               ';
-              }?>
+                 }
+
+
+                  ?>
 
             <!-- Single Product Area -->
 

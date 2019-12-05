@@ -1,7 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="" />
+    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/js2/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/Isotope/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/OwlCarousel2-2.2.1/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/greensock/ScrollToPlugin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/greensock/TimelineMax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/greensock/TweenMax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/greensock/animation.gsap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/parallax-js-master/parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/plugins/scrollmagic/ScrollMagic.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/bootstrap4/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/bootstrap4/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/bootstrap4/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/cart_responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/categories.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/categories_responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/checkout_responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/contact_responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/main_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/product_responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/farmie/styles/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/afficheselon.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/afficheselon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/headerc.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/headerc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/fonctionC.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +117,19 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="sers" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sers" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sisagri2: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="produits: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -115,6 +212,14 @@
       <workItem from="1574851455824" duration="75000" />
       <workItem from="1574875578059" duration="9047000" />
       <workItem from="1574929834375" duration="12610000" />
+      <workItem from="1574960466222" duration="83000" />
+      <workItem from="1574975749490" duration="1177000" />
+      <workItem from="1575016901547" duration="1509000" />
+      <workItem from="1575073610662" duration="600000" />
+      <workItem from="1575400811321" duration="2849000" />
+      <workItem from="1575411876778" duration="3149000" />
+      <workItem from="1575477850178" duration="11888000" />
+      <workItem from="1575503283969" duration="2375000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
@@ -165,7 +270,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574958858272</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="badelt js ya jme3a">
+      <created>1574960532429</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574960532429</updated>
+    </task>
+    <task id="LOCAL-00009" summary="affiche selon categorie">
+      <created>1575482442660</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575482442660</updated>
+    </task>
+    <task id="LOCAL-00010" summary="affiche selon categorie">
+      <created>1575483183813</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575483183813</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +315,7 @@
     <MESSAGE value="aaa" />
     <MESSAGE value="chqnge" />
     <MESSAGE value="badelt js ya jme3a" />
-    <option name="LAST_COMMIT_MESSAGE" value="badelt js ya jme3a" />
+    <MESSAGE value="affiche selon categorie" />
+    <option name="LAST_COMMIT_MESSAGE" value="affiche selon categorie" />
   </component>
 </project>

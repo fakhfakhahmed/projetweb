@@ -4,7 +4,7 @@ include 'inc/fonctionC.php';
 $prod=new fonctionC();
 $listorod=$prod->afficherCategorie();
 
-echo "salem";
+
 ?>
     <section class="au-breadcrumb m-t-75">
         <div class="section__content section__content--p30">
