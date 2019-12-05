@@ -187,12 +187,12 @@ if (mysqli_num_rows($req)==1)
  {echo'connected';
    session_start();
   $row=mysqli_fetch_array($req,MYSQLI_NUM);
-  $_SESSION['email']=$email;
-  $_SESSION['password']=$mdp;
+  $_SESSION['mail']=$email;
+  $_SESSION['pass']=$mdp;
   $_SESSION['type']=$row[6];
-  $_SESSION['nom']=$row[1];
-  $_SESSION['username']=$row[0];
-  $_SESSION['prenom']=$row[2];
+  $_SESSION['name']=$row[1];
+  $_SESSION['usernamee']=$row[0];
+  $_SESSION['lastname']=$row[2];
   $_SESSION['tel']=$row[5];
  header('Location: ../../index.php');
 

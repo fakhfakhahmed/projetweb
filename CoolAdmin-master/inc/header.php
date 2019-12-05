@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
-if(!(isset($_SESSION['email'])))
+if(!(isset($_SESSION['mail'])))
 {
   header('location:login.php');
 }?>
@@ -55,7 +55,7 @@ if(!(isset($_SESSION['email'])))
         <div class="menu-sidebar2__content js-scrollbar1">
             <div class="account2">
 
-                <h4 class="name"><?php echo $_SESSION['nom'].' '.$_SESSION['prenom'];?></h4>
+                <h4 class="name"><?php echo $_SESSION['name'].' '.$_SESSION['lastname'];?></h4>
           <form method="post" action='logout.php'>
                 <input type="submit" value="log out" class="btn-sm btn-danger">
             </div>

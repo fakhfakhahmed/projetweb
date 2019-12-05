@@ -68,7 +68,6 @@ include 'inc/header.php';
                         <td>'. $row[0].'</td>
                         <td>'. $row[1].'</td>
                         <td>'. $row[2].'</td>
-
                         <td>'. $row[4].'</td>
                         <td>'. $row[5].'</td>
 
