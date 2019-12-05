@@ -130,7 +130,7 @@ $listselon=$prod->afficherSelon($cate);
 
                     <!-- Single Product Area -->
                     <?php
-                    if($cate >= 0) {
+                    if($cate > 0) {
 
                         foreach ($listselon as $row) {
 
@@ -160,11 +160,7 @@ $listselon=$prod->afficherSelon($cate);
               ';
                         }
                     }
-                    else
-                    {
 
-                        echo 'no produit found';
-                    }
                     ?>
 
                     <!-- Single Product Area -->
