@@ -165,6 +165,51 @@ class fonctionC
 				}
 }
 
+function autheadmin($client)
+{
+
+      $mdp=$client->getmdp();
+      $email=$client->getemail();
+
+
+  $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+  mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+  $sql="select * from admin  where ((email='$email') and(mdp='$mdp')) ";
+
+  $req=mysqli_query($host,$sql);
+
+
+
+if (mysqli_num_rows($req)==1)
+ {echo'connected';
+   session_start();
+  $row=mysqli_fetch_array($req,MYSQLI_NUM);
+  $_SESSION['email']=$email;
+  $_SESSION['password']=$mdp;
+  $_SESSION['type']=$row[6];
+  $_SESSION['nom']=$row[1];
+  $_SESSION['username']=$row[0];
+  $_SESSION['prenom']=$row[2];
+  $_SESSION['tel']=$row[5];
+ header('Location: ../../index.php');
+
+
+
+
+
+ }
+
+
+ else{echo'invalide';
+
+ }
+
+}
+
+
 
 
 

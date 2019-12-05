@@ -1,5 +1,9 @@
+
 <?php
 include 'inc/header.php';
+
+
+
 
 
 	$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
@@ -10,11 +14,8 @@ include 'inc/header.php';
 		$sql="select * from admin  ";
 
 		$req=mysqli_query($host,$sql);
-
-
-
-
  ?>
+
 <section class="au-breadcrumb m-t-75">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
@@ -31,10 +32,12 @@ include 'inc/header.php';
 
                             </ul>
                         </div>
+												<?php if ($_SESSION['type']=='sadmin')
+												echo'
                         <form method="post" action="ajouteradmin.php">
                         <button  type="submit" class="au-btn au-btn-icon au-btn--green">
                             <i class="zmdi zmdi-plus"></i>Ajouter Admin </button>
-                        </form>
+                        </form>'?>
                     </div>
                 </div>
             </div>
