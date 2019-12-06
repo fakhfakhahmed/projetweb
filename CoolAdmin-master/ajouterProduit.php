@@ -67,7 +67,7 @@ $lc=$c->afficherCategorie();
 
 
                         </select>
-                        <small class="form-text text-muted">Ajouter Categorie de Produit</small>
+                        <small id="erreur" class="form-text">Ajouter Categorie de Produit</small>
                     </div>
                 </div>
                 <div class="row form-group">

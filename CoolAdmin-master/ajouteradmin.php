@@ -3,7 +3,7 @@ include 'inc/header.php';
 include 'inc/db.php';
 include "inc/fonctionC.php";
 $c=new fonctionC();
-$lc=$c->afficherCategorie();
+
 ?>
 <section class="au-breadcrumb m-t-75">
     <div class="section__content section__content--p30">
@@ -91,7 +91,7 @@ $lc=$c->afficherCategorie();
 
 
 
-                <div style="margin-left: 530px;" >
+                <div  >
                     <button type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-dot-circle-o"></i> Submit
                     </button>

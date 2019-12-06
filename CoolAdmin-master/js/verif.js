@@ -24,7 +24,16 @@ function test() {
     c3=document.getElementById('Desc');
     c4=document.getElementById('stock');
     c5=document.getElementById('keyword');
+    c6=document.getElementById('cat');
 
+    if(c6.value=="")
+    {
+
+        document.getElementById("erreur").innerHTML="le champ categorie est obligatoire";
+        document.getElementById('erreur').classList.add("text-danger");
+        c6.classList.add("is-invalid");
+        return false;
+    }
      if(c2.value==""){
 
         document.getElementById('errr').innerHTML="le champ nom est obligatoire";
@@ -85,6 +94,7 @@ function test() {
          c5.classList.add("is-invalid");
          return false;
      }
+
 
 
 
