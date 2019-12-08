@@ -100,7 +100,7 @@ foreach ($listorod as $row) {
                                               </div>
                                               <div class="md-form mb-5">
                                                 <label data-error="wrong" data-success="right" for="orangeForm-name">Nom du client </label>
-                                                <input type="text" id="orangeForm-name" name="username" class="form-control validate" value="'.$row["username"].'" >
+                                                <input type="text" id="orangeForm-name" name="id_client" class="form-control validate" value="'.$row["username"].'" >
                                               </div>
                                                <input type="hidden" name="id_livraison" value="'.$row["id_livraison"].'">
                                             </div>

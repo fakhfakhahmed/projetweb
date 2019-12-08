@@ -41,7 +41,7 @@ $lc=$c->afficherLivreurdispo();
             <strong>Ajouter</strong> Livraison
         </div>
         <div class="card-body card-block">
-            <form action="ajouterlivrai.php" method="post" enctype="multipart/form-data" class="form-horizontal" onsubmit="return verif()">
+            <form action="ajouterlivrai.php" method="post" name="myform" enctype="multipart/form-data" class="form-horizontal" onsubmit="return verif()">
 
                 <div class="row form-group">
                     <div class="col col-md-3">
@@ -66,8 +66,8 @@ $lc=$c->afficherLivreurdispo();
                         <label for="text-input" class=" form-control-label">Date arrive</label>
                     </div>
                     <div class="col-12 col-md-9">
-                                <input type="date" id="nom" name="date_arrive" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter date arrive de la livraison</small>
+                                <input type="date" id="cat3" name="date_arrive" placeholder="Text" class="form-control" >
+                        <small id="err1" class="form-text ">Ajouter date arrive de la livraison</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -88,7 +88,7 @@ $lc=$c->afficherLivreurdispo();
 
 
                         </select>
-                        <small class="form-text text-muted">Ajouter identifiant de la commande</small>
+                        <small id="err2" class="form-text text-muted">Ajouter identifiant de la commande</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -97,7 +97,7 @@ $lc=$c->afficherLivreurdispo();
 
                     </div>
                     <div class="col-12 col-md-9">
-                        <select name="id_client" id="cat" class="form-control">
+                        <select name="id_client" id="cat1" class="form-control">
 
                             <option> SELECT Client  </option>
                             <?php
@@ -109,7 +109,7 @@ $lc=$c->afficherLivreurdispo();
 
 
                         </select>
-                        <small class="form-text text-muted">Ajouter identifiant du client</small>
+                        <small id="err3" class="form-text text-muted">Ajouter identifiant du client</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -118,19 +118,19 @@ $lc=$c->afficherLivreurdispo();
 
                     </div>
                     <div class="col-12 col-md-9">
-                        <select name="id_client" id="cat" class="form-control">
+                        <select name="id_livreur" id="cat2" class="form-control">
 
                             <option> SELECT Livreur  </option>
                             <?php
                             foreach ($lc as $cl)
                             {
-                                echo '<option value="'.$cl["username"].'">  '.$cl["nom"].' </option>';
+                                echo '<option value="'.$cl["id_livreur"].'">  '.$cl["nom"].' </option>';
                             }
                             ?>
 
 
                         </select>
-                        <small class="form-text text-muted">Ajouter CIN du livreur</small>
+                        <small id="err4" class="form-text text-muted">Ajouter CIN du livreur</small>
                     </div>
                 </div>
                 <div style="margin-left: 530px;" >
@@ -141,10 +141,6 @@ $lc=$c->afficherLivreurdispo();
                         <i class="fa fa-ban"></i> Reset
                     </button>
                 </div>
-
-
-
-
 
             </form>
         </div>
