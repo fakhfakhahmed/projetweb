@@ -1,16 +1,24 @@
 <?PHP
-include "../consulterlivraison.php";
-include "../fonctionc.php";
+include 'inc/consulterlivraison.php';
+include 'inc/fonctionc.php';
 
-if (isset($_POST['username'])){
-$consul=new consulter($_POST['username']);
+if (isset($_POST['nom'])){
+$consul=new consulter($_POST['nom']);
 
 $fonctionc=new fonctionc();
-$fonctionc->consulterlivraison($consul);
+$x=$fonctionc->consulterlivraison($consul);
+//echo $x;
+if($x==0)
+{
+	header("location:afficherconsultation.php"); 
 }
-else{
-	echo "vérifier les champs";
+else if($x==2)
+{
+	echo 'bloquer';
 }
-
-
+else
+{
+	echo'invalide';
+}
+}
 ?>
