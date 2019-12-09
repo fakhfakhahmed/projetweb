@@ -168,6 +168,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js2/product.js"></script>
 
+
 </body>
 
 </html>

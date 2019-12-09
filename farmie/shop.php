@@ -7,13 +7,26 @@ else{include'header.php';
 
 
 }
-
-
-
   include '../CoolAdmin-master/inc/fonctionC.php';
-//  include '../CoolAdmin-master/inc/categorieC.php';
-  $prod=new fonctionC();
-  $listorod=$prod->afficherProduit();
+$prod=new fonctionC();
+if(isset($_GET['cat']))
+{
+
+    $cat= $_GET['cat'];
+    $listorod=$prod->afficherProduit($cat,null);
+}
+else if(isset($_GET['key']))
+{
+
+    $key= $_GET['key'];
+    $listorod=$prod->afficherProduit(null,$_GET['key']);
+}
+else
+{
+    $listorod=$prod->afficherProduit();
+}
+
+
   $listcat=$prod->afficherCategorie();
 
 
@@ -46,7 +59,7 @@ else{include'header.php';
   <!-- ##### Breadcrumb Area End ##### -->
 
   <!-- ##### Shop Area Start ##### -->
-  <section class="shop-area section-padding-0-100">
+  <section id="ads" class="shop-area section-padding-0-100">
     <div class="container">
 
       <div class="row">
@@ -55,14 +68,16 @@ else{include'header.php';
           <div class="shop-filters mb-30 d-flex align-items-center justify-content-between">
             <!-- Product Show -->
             <div class="product-show">
-              <h6>Showing 1–9 of 72 results</h6>
+              <h6>Showing 1–9 of <?php echo $listorod->rowCount() ?> results</h6>
+
             </div>
 
+
             <!-- Product View Mode -->
-            <div class="produtc-view-mode">
-              <a href="#"><i class="fa fa-th"></i></a>
-              <a href="#"><i class="fa fa-list-ul"></i></a>
-            </div>
+              <div class="produtc-view-mode">
+                  <a href="#"><i class="fa fa-th"></i></a>
+                  <a href="#"><i class="fa fa-list-ul"></i></a>
+              </div>
           </div>
         </div>
       </div>
@@ -104,7 +119,7 @@ else{include'header.php';
                   foreach ($listcat as $cat)
                   {
 
-                      echo '  <li><a href="afficheselon.php?cat='.$cat["id_categorie"].'">'; echo' '.$cat["nom_cat"].' 
+                      echo '  <li><a href="shop.php?cat='.$cat["id_categorie"].'">'; echo' '.$cat["nom_cat"].' 
                   </a></li>';
                   }
 
@@ -124,18 +139,25 @@ else{include'header.php';
 
 
         </div>
-
+          <table>
         <!-- Shop Products Area -->
+              <tr>
+
         <div class="col-12 col-md-8 col-lg-9">
           <div class="row">
 
             <!-- Single Product Area -->
               <?php
+              if ($listorod->rowCount()==0)
+              {
+                  echo "No Product found !";
+              }
 
 
                   foreach ($listorod as $row) {
 
                       echo '
+
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="single-product-area mb-50">
                 <!-- Product Thumbnail -->
@@ -153,7 +175,7 @@ else{include'header.php';
                 <!-- Product Description -->
                 
                 <div class="product-desc text-center pt-4">
-                  <a href="#" class="product-title">' . $row["nom"] . '</a>
+                  <a href="description.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
                   <h6 class="price">' . $row["prix"] . ' DNT</h6>
                 </div>
               </div>
@@ -164,51 +186,16 @@ else{include'header.php';
 
                   ?>
 
-            <!-- Single Product Area -->
 
-
-            <!-- Single Product Area -->
-
-
-            <!-- Single Product Area -->
-
-            <!-- Single Product Area -->
-
-
-            <!-- Single Product Area -->
-
-            <!-- Single Product Area -->
-
-
-            <!-- Single Product Area -->
-
-                <!-- Product Description -->
-
-
-            <!-- Single Product Area -->
-
-            <!-- Single Product Area -->
-
-
-            <!-- Single Product Area -->
-
-                <!-- Product Description -->
-
-
-            <!-- Single Product Area -->
-
-                <!-- Product Description -->
-
-
-
-
-          <!-- Pagination -->
 
       </div>
         </div>
 
     </div>
+    </tr>
+        </table>
   </section>
+
   <!-- ##### Shop Area End ##### -->
 
   <!-- ##### Footer Area Start ##### -->

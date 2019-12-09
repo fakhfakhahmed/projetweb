@@ -111,9 +111,9 @@
                   <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <!-- Search Icon -->
-                <div id="searchIcon">
-                  <i class="icon_search" aria-hidden="true"></i>
-                </div>
+                    <div id="searchIcon">
+                      <i class="icon_search" aria-hidden="true"></i>
+                    </div>
                 <!-- Cart Icon -->
                 <div id="cartIcon">
                   <a href="#">
@@ -128,9 +128,9 @@
 
           <!-- Search Form -->
           <div class="search-form">
-            <form action="#" method="get">
-              <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-              <button type="submit" class="d-none"></button>
+            <form action="shop.php" method="get">
+              <input type="search" name="key" id="search" placeholder="Type keywords &amp; press enter...">
+                  <button type="submit" class="d-none"></button>
             </form>
             <!-- Close Icon -->
             <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>

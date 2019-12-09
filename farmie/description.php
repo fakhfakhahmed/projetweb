@@ -43,12 +43,30 @@ if ($desc>0) {
                         <div class="details_name">' . $row["nom"] . '</div>
 
                         <div class="details_price">' . $row["prix"] . '</div>
-
+                        ';
+        if ($row["stock"] > 0) {
+            echo '
                         <!-- In Stock -->
                         <div class="in_stock_container">
                             <div class="availability">Availability:</div>
-                            <span>' . $row["stock"] . '</span>
+                            
+                            <span>On STOCK</span>
                         </div>
+                        
+                       ';
+        }
+        else{
+            echo '
+                        <!-- In Stock -->
+                        <div class="in_stock_container">
+                            <div class="availability">Availability:</div>
+                            
+                            <span style="color: #ff0039;">Off STOCK</span>
+                        </div>
+                        
+                       ';
+        }
+            echo '
                         <div class="details_text">
                             <p>' . $row["description"] . '</p>
                         </div>
@@ -63,7 +81,8 @@ if ($desc>0) {
                                     <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                                 </div>
                             </div>
-                            <div class="button cart_button"><a href="#">Add to cart</a></div>
+                           
+                             <div  class="button cart_button " ><a  href="shop.php" >Add to cart </a></div>
                         </div>
 
                         <!-- Share -->
@@ -86,7 +105,8 @@ if ($desc>0) {
         </div>
     </div>
 ';
-    }
+        }
+
 }
 ?>
 <?php include'footer.php';?>

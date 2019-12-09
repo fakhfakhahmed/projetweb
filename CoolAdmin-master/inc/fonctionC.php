@@ -85,13 +85,17 @@ class fonctionC
         }
 
     }
-    function afficherProduit($id_cat=null)
+    function afficherProduit($id_cat=null,$key=null)
     {
 
         $sql="select * from produits";
         if ($id_cat!=null)
         {
             $sql=$sql." where id_categorie = '$id_cat'";
+        }
+        if ($key!=null)
+        {
+            $sql=$sql." where key_word like '%$key%'";
         }
         $db = config::getConnexion();
         try
@@ -201,22 +205,6 @@ class fonctionC
 
 
 	}
-    function afficherSelon($cate)
-   {
-
-        $sql="select * from produits where id_categorie = '$cate'  ";
-
-        $db = config::getConnexion();
-        try
-        {
-            $list=$db->query($sql);
-            return $list;
-        }
-        catch (Exception $e)
-        {
-            die('Erreur: '.$e->getMessage());
-        }
-    }
     function afficherDesc($desc)
     {
 
