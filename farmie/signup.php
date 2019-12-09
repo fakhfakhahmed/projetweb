@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <section>
-	<script type="text/javascript" src="js/signup.js"></script>
-	<form method="post"  name="f" action="inc/views/ajouterclient.php" onsubmit="return signup()">
+
+	<form method="post"  name="f" action="inc/views/ajouterclient.php" >
 <div class="col-12 col-lg-5">
 	<div class="contact-content mb-100">
 		<!-- Section Heading -->
