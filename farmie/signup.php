@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 <section>
-	<form method="post" action="inc/views/ajouterclient.php">
+
+	<form method="post"  name="f" action="inc/views/ajouterclient.php" >
 <div class="col-12 col-lg-5">
 	<div class="contact-content mb-100">
 		<!-- Section Heading -->
@@ -28,12 +29,17 @@
 					<div class="col-12">
 						<input type="text" class="form-control" name="phone" placeholder="Your phone number" required>
 					</div>
+						<span id="tel"></span>
 					<div class="col-12">
 						<input type="password" class="form-control" name="pass" placeholder="Your password" required>
 					</div>
-					<div class="col-12">
-						<input type="password" class="form-control" name="confirmpass" placeholder="Confirm your password" required>
+
+
+					 <div class="col-12">
+						 <input type="password" class="form-control" name="confirmpass" placeholder="Confirm your password" required>
+
 					</div>
+					<span id="mdp"></span>
 
 					<div class="col-12">
 						<button type="submit" class="btn famie-btn">Sign up</button>

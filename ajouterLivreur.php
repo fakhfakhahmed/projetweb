@@ -48,8 +48,8 @@ include 'inc/header.php';
                         <label for="text-input" class=" form-control-label">Nom </label>
                     </div>
                     <div class="col-12 col-md-9">
-                                <input type="text" id="nom" name="nom" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter un nom du livreur</small>
+                                <input type="text" id="cat1" name="nom" placeholder="Text" class="form-control" >
+                        <small id="err1" class="form-text ">Ajouter un nom du livreur</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -57,8 +57,8 @@ include 'inc/header.php';
                         <label for="text-input" class=" form-control-label">prenom du livreur</label>
                     </div>
                     <div class="col-12 col-md-9">
-                                <input type="text" id="nom" name="prenom" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter le prenom du livreur</small>
+                                <input type="text" id="cat2" name="prenom" placeholder="Text" class="form-control" >
+                        <small id="err2" class="form-text ">Ajouter le prenom du livreur</small>
                     </div>
                 </div>
                 
@@ -74,7 +74,7 @@ include 'inc/header.php';
                             <option>0</option>;
                             <option>1</option>;
                         </select>
-                        <small class="form-text text-muted">0 pour disponible ou 1 sinon</small>
+                        <small id="err" class="form-text text-muted">0 pour disponible ou 1 sinon</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -82,8 +82,8 @@ include 'inc/header.php';
                         <label for="text-input" class=" form-control-label">Matricule voiture</label>
                     </div>
                     <div class="col-12 col-md-9">
-                                <input type="text" id="nom" name="matricule" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter un matricule</small>
+                                <input type="text" id="cat3" name="matricule" placeholder="Text" class="form-control" >
+                        <small id="err3" class="form-text ">Ajouter un matricule</small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -91,8 +91,8 @@ include 'inc/header.php';
                         <label for="text-input" class=" form-control-label">Adresse</label>
                     </div>
                     <div class="col-12 col-md-9">
-                                <input type="text" id="nom" name="adresse" placeholder="Text" class="form-control" >
-                        <small id="err" class="form-text ">Ajouter une adresse du livreur</small>
+                                <input type="text" id="cat4" name="adresse" placeholder="Text" class="form-control" >
+                        <small id="err4" class="form-text ">Ajouter une adresse du livreur</small>
                     </div>
                 </div>
                 <div class="row form-group">
