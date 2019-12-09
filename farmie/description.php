@@ -32,10 +32,11 @@ if ($desc>0) {
                 <!-- Product Image -->
                 <div class="col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large"><img src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" alt=""></div>
+                        <div class="details_image_large"><img src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" data-imagezoom="true" alt=""></div>
 
                     </div>
                 </div>
+                
 
                 <!-- Product Content -->
                 <div class="col-lg-6">
