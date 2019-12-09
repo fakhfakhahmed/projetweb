@@ -48,7 +48,7 @@ include 'inc/header.php';
 
 <div class="col-lg-">
     <div class="table-responsive table100 ver2 ">
-        <table class="table table-borderless table-striped table-earning"  style="margin-left: 70px;">
+        <table id="example" class="table table-borderless table-striped table-earning"  style="margin-left: 70px;">
             <thead>
               <tr>
                 <th>username</th>

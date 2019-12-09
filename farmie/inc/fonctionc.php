@@ -17,9 +17,16 @@ class fonctionc
 
 
 
-				$sql="INSERT INTO client (username, nom, prenom,email , mdp,tel) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel')";
-
+				$sql="INSERT INTO client (username, nom, prenom,email , mdp,tel,dateinscri) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel',NOW())";
+        $sql1="select * from client where email='$email'";
+				$req1=mysqli_query($host,$sql1);
+				if(mysqli_num_rows($req1)==0)
+				{
 				$req=mysqli_query($host,$sql);
+				header('Location: ../../index.php');
+			}
+			else{echo'email existe';
+			}
 
 
 

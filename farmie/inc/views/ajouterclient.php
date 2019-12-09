@@ -9,7 +9,7 @@ $fonctionc=new fonctionc();
 
 $fonctionc->ajouterclient($client);
 
-header('Location: ../../index.php');
+
 
 }
 else{
