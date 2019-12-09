@@ -127,6 +127,20 @@ if(!(isset($_SESSION['mail'])))
                                     <i class="fas fa-table"></i>Ajouter</a>
                             </li>
                         </ul>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-table"></i>Commande
+                                <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="affichercommande.php">
+                                        <i class="fas fa-table"></i>Afficher</a>
+                                </li>
+                            </ul>
+
                         <!-- <li>
                              <a href="form.html">
                                  <i class="far fa-check-square"></i>Forms</a>
