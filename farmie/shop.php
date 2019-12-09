@@ -166,7 +166,7 @@ else
                   <div class="product-meta-data">
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                    <a href="descp.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
+                    <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
                   </div>
                 </div>
                 <!-- Product Description -->

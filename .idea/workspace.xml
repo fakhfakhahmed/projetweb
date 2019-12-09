@@ -2,44 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/computer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CoolAdmin-master/images/images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/checkout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/creditly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/easy-responsive-tabs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/flexslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/fontawesome-all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/jquery-ui1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/login_overlay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/owl.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/simplyCountdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/css3/style6.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/classie-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/creditly.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/demo1-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/easy-responsive-tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/imagezoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/jquery-2.2.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/jquery.easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/jquery.flexslider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/jquery.magnific-popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/minicart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/modernizr-2.6.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/move-top.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmie/js3/simplyCountdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmie/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmie/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmie/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmie/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/shop.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -184,7 +146,7 @@
       <workItem from="1575721504296" duration="618000" />
       <workItem from="1575800413806" duration="1322000" />
       <workItem from="1575808108012" duration="4396000" />
-      <workItem from="1575891333992" duration="13073000" />
+      <workItem from="1575891333992" duration="13682000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
