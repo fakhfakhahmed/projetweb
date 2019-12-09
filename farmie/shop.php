@@ -174,7 +174,7 @@ else
                 <!-- Product Description -->
 
                 <div class="product-desc text-center pt-4">
-                  <a href="description.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
+                  <a href="descp.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
                   <h6 class="price">' . $row["prix"] . ' DNT</h6>
                 </div>
               </div>
