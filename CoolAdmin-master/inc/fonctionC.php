@@ -214,7 +214,23 @@ if (mysqli_num_rows($req)==1)
 }
 
 
+function supprimeradmin($client)
+{
+      $username=$client->getusername();
 
+
+      $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+      mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+      $sql="DELETE FROM `admin` WHERE `admin`.`username` = '$username'";
+
+      $req=mysqli_query($host,$sql);
+
+
+
+}
 
 
 	function supprimerclient($client)
@@ -234,6 +250,21 @@ if (mysqli_num_rows($req)==1)
 
 
 	}
+  function bloqueradmin($client,$etat)
+  {
+        $email=$client->getemail();
+
+
+        $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+        mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+        $sql="UPDATE `admin` SET `etat` = '$etat' WHERE `admin`.`email` = '$email';";
+
+       $req=mysqli_query($host,$sql);
+
+
+
+  }
 
 	function bloquerclient($client,$etat)
 	{

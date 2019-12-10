@@ -1,5 +1,13 @@
 <?php
-include 'inc/header.php'
+include 'inc/header.php';
+$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+  mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+  $sql="select * from client  ";
+
+  $req=mysqli_query($host,$sql);
 ?>
 
 
@@ -39,8 +47,9 @@ include 'inc/header.php'
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <h2 class="number">10,368</h2>
-                        <span class="desc">members online</span>
+                        <span class="desc">Accounts number:</span>
+                        <h2 class="number"><?php echo mysqli_num_rows($req);?>  </h2>
+
                         <div class="icon">
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
