@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/zeyid/.gitattributes" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/zeyid/.gitignore" afterDir="false" />
@@ -62,6 +63,10 @@
       <change beforePath="$PROJECT_DIR$/supprimercom.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/supprimerlivraison.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/supprimerlivreur.php" beforeDir="false" />
+=======
+    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="affiche selon categorie&#10;AND PAGE DESC&#10;FONT AWSOME">
+      <change beforePath="$PROJECT_DIR$/farmie/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,8 +210,13 @@
       <workItem from="1575721504296" duration="618000" />
       <workItem from="1575800413806" duration="1322000" />
       <workItem from="1575808108012" duration="4396000" />
+<<<<<<< HEAD
       <workItem from="1575891333992" duration="14629000" />
       <workItem from="1575972127587" duration="2805000" />
+=======
+      <workItem from="1575891333992" duration="14023000" />
+      <workItem from="1575909222089" duration="396000" />
+>>>>>>> origin/master
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>
