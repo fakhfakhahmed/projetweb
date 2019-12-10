@@ -3,6 +3,222 @@
 include "config.php";
 class fonctionC
 {
+  function ajouterCom($com)
+    {
+        $sql= "insert into sisagri2.commande(id_produit,quantite,prix,id_client,date) values (:id_produit,:quantite,:prix,:id_client,:date)";
+        $db = config::getConnexion();
+        try
+        {
+            $req=$db->prepare($sql);
+
+            $id_produit=$com->getid_produit();
+            $quantite=$com->getquantite();
+            $prix=$com->getprix();
+            $id_client=$com>getid_client();
+            $date=$categorie->getdate();
+
+
+
+            $req->bindValue(':id_produit',$id_produit);
+            $req->bindValue(':quatite',$quantite);
+            $req->bindValue(':prix',$prix);
+            $req->bindValue(':id_client',$id_client);
+            $req->bindValue(':date',$date);
+
+
+
+            $req->execute();
+
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: Un criminel avec ce cin existe deja');
+
+        }
+
+    }
+    function afficherCom()
+    {
+
+        $sql="select * from sisagri2.produits_commande ";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function suppcom($orderId)
+    {
+        $sql="DELETE FROM sisagri2.produits_commande WHERE orderId LIKE '$orderId' ";
+
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+  function modifierCommande($orderId,$uemail,$innoviceNumber,$prodId,$qty,$status)
+    {
+        $sql= "update sisagri2.produits_commande set uemail='$uemail', innoviceNumber='$innoviceNumber', prodId='$prodId', qty='$qty', status='$status' where orderId='$orderId'";
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function ajouterpanier($id_produit)
+    {
+        $sql = "insert into sisagri2.panier(id_produit,ip_add,qty) values (:id_produit,:ip_add,:qty)";
+        $db = config::getConnexion();
+        try {
+            $req = $db->prepare($sql);
+            $ip_add = gethostbyname(gethostname());
+            $qty = 1;
+
+
+            $req->bindValue(':id_produit', $id_produit);
+            $req->bindValue(':ip_add', $ip_add);
+            $req->bindValue(':qty', $qty);
+
+
+            $req->execute();
+
+        }
+        catch (Exception $e) {
+            if($e->getCode()==23000)
+            {
+                $sql2="update sisagri2.panier set qty=qty+1 where id_produit='$id_produit'";
+                $db = config::getConnexion();
+                try {
+                    $db->query($sql2);
+
+                }
+                catch (Exception $e) {
+                    echo "error: ".$e->getMessage();
+
+                }
+            }
+        }
+
+    }
+    function afficherpanier()
+    {
+        $ip_a=gethostbyname(gethostname());
+        $sql="select * from sisagri2.panier where ip_add='$ip_a'";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+
+    }
+    function supppan($id_produit)
+    {
+        $sql="DELETE FROM sisagri2.`panier` WHERE id_produit = '$id_produit' ";
+
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function modifierpanier($id_produit,$qty)
+    {
+        $sql= "update sisagri2.panier set qty='$qty' where id_produit='$id_produit'";
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+
+    function getprod($id_prod)
+    {
+        $sql = "SELECT * FROM sisagri2.produits WHERE id_produit='$id_prod'";
+        $db = config::getConnexion();
+        try {
+            return $db->query($sql)->fetch();
+
+        } catch (Exception $e) {
+            die('Erreur: ' . $e->getMessage());
+        }
+    }
+    function addFromCart($uemail)
+    {
+        $ipA=gethostbyname(gethostname());
+        $l=$this->afficherpanier($ipA);
+        $x=random_int(1000000,9999999);//innovice number
+        $v=0;
+        $n=0;
+        foreach ($l as $p)
+        {
+            $pId=$p["id_produit"];
+            $qty=$p["qty"];
+            $prod=$this->getprod($pId);
+            $v=$v+$prod["prix"]*$qty;
+            $n=$n+$qty;
+            // ta3ti num fatoura lkol produit fel panier
+            $sql="insert into sisagri2.produits_commande (uemail, innoviceNumber, prodId, qty) values ('$uemail','$x','$pId','$qty')";
+            $sql4="update sisagri2.produits set quantite =quantite-'$qty' where id_produit='$pId' ";
+            $db=config::getConnexion();
+            try
+            {
+                $db->query($sql);
+                $db->query($sql4);
+            }
+            catch (Exception $e)
+            {
+                echo 'error :'.$e->getMessage();
+            }
+
+
+        }
+        // aaa ta3mel commande fiha num el fatoura
+        $sql2="insert into sisagri2.commande (uemail, dueAmount, innoNumber, totalQty) values ('$uemail','$v','$x','$n')";
+        try
+        {
+            $db->query($sql2);
+        }
+        catch (Exception $e)
+        {
+            echo 'error :'.$e->getMessage();
+        }
+        $sql3="delete from sisagri2.panier where ip_add='$ipA'";
+        try
+        {
+            $db->query($sql3);
+        }
+        catch (Exception $e)
+        {
+            echo 'error :'.$e->getMessage();
+        }
+    }
     function ajouterCat($categorie)
     {
         $sql= "insert into sisagri2.categories(nom_cat) values (:nom)";

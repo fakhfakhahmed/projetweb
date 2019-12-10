@@ -1,16 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/abb2d069-9df9-4291-847f-3e70bcca0b30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/abb2d069-9df9-4291-847f-3e70bcca0b30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/cart1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/sisagri.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeyid/sisagri2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/CoolAdmin-master/inc/fonctionC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmie/afficheselon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/badge.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/fontawesome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/inbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/progress-bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/switch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoolAdmin-master/typo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/affichercommande.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/afficherconsultation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/afficherconsultation2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/afficherlivraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/afficherlivreur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajouterLivreur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajouterliv.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajouterlivrai.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajouterlivraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajouterpanier.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consulter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consulter_livraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consulterlivraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deleteCart.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/farmie/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmie/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmie/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmie/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonctionC.php" beforeDir="false" afterPath="$PROJECT_DIR$/fonctionC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctionC.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/livraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/livreur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modifiercomm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modifierlivraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modifierlivreur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisagri.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisagri2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supprimercom.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supprimerlivraison.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supprimerlivreur.php" beforeDir="false" />
+=======
+    <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="affiche selon categorie&#10;AND PAGE DESC&#10;FONT AWSOME">
+      <change beforePath="$PROJECT_DIR$/farmie/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +210,13 @@
       <workItem from="1575721504296" duration="618000" />
       <workItem from="1575800413806" duration="1322000" />
       <workItem from="1575808108012" duration="4396000" />
-      <workItem from="1575891333992" duration="3798000" />
+<<<<<<< HEAD
+      <workItem from="1575891333992" duration="14629000" />
+      <workItem from="1575972127587" duration="2805000" />
+=======
+      <workItem from="1575891333992" duration="14023000" />
+      <workItem from="1575909222089" duration="396000" />
+>>>>>>> origin/master
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>

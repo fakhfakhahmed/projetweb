@@ -1,3 +1,8 @@
+<?php
+include '../CoolAdmin-master/inc/fonctionC.php';
+$f=new fonctionC();
+$l=$f->afficherpanier();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,8 +120,8 @@
                 <!-- Cart Icon -->
                 <div id="cartIcon">
                   <a href="#">
-                    <i class="icon_cart_alt" aria-hidden="true"></i>
-                    <span class="cart-quantity">2</span>
+                      <a href="../farmie/cart1.php"><i class="icon_cart_alt" aria-hidden="true"></i><span class="cart-quantity"><?php echo $l->rowcount(); ?></span></a>
+
                   </a>
                 </div>
               </div>

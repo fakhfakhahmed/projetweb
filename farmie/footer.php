@@ -169,6 +169,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js2/product.js"></script>
 
 
+
+<script src="js3/jquery-2.2.3.min.js"></script>
+<!-- newsletter modal -->
+<!--search jQuery-->
+
+<!--//search jQuery-->
+<!-- cart-js -->
+
+
+<!-- //cart-js -->
+
+<!-- carousel -->
+<!-- price range (top products) -->
+
+
+<!-- //price range (top products) -->
+
+
+
+<!-- //end-smooth-scrolling -->
+
+<!-- single -->
+<script src="js3/imagezoom.js"></script>
+<!-- single -->
+<!-- script for responsive tabs -->
+
+
+<!-- FlexSlider -->
+
+
+<!-- //FlexSlider-->
+
+<!-- dropdown nav -->
+
+<!-- //dropdown nav -->
+
+
+
+<!--// end-smoth-scrolling -->
+
+
+
 </body>
 
 </html>

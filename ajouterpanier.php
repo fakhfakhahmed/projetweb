@@ -10,5 +10,5 @@ if( isset($_POST["id_produit"]))
 }
 else
 {
-    echo "vérifier les champs";
+    echo "vérifier les champs  ";
 }

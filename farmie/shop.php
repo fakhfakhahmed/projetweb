@@ -7,7 +7,7 @@ else{include'header.php';
 
 
 }
-  include '../CoolAdmin-master/inc/fonctionC.php';
+
 $prod=new fonctionC();
 if(isset($_GET['cat']))
 {
@@ -119,7 +119,7 @@ else
                   foreach ($listcat as $cat)
                   {
 
-                      echo '  <li><a href="shop.php?cat='.$cat["id_categorie"].'">'; echo' '.$cat["nom_cat"].' 
+                      echo '  <li><a href="shop.php?cat='.$cat["id_categorie"].'">'; echo' '.$cat["nom_cat"].'
                   </a></li>';
                   }
 
@@ -139,10 +139,8 @@ else
 
 
         </div>
-          <table>
-        <!-- Shop Products Area -->
-              <tr>
 
+        <!-- Shop Products Area -->
         <div class="col-12 col-md-8 col-lg-9">
           <div class="row">
 
@@ -157,23 +155,24 @@ else
                   foreach ($listorod as $row) {
 
                       echo '
-
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="single-product-area mb-50">
                 <!-- Product Thumbnail -->
                 <div class="product-thumbnail">
-                  <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" alt="">
+                  <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"   alt="">
                   <!-- Product Tags -->
                   <span class="product-tags">SALE</span>
                   <!-- Product Meta Data -->
                   <div class="product-meta-data">
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                    <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
+                    <form style="display: inline-block;" action="../CoolAdmin-master/ajouterpanier.php" method="post">
+                                      <input type="hidden" name="id_produit" value="'.$row["id_produit"].'">
+                                      <button type="submit"><i class="icon_cart_alt"></i></button>
+                                      </form>                    <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
                   </div>
                 </div>
                 <!-- Product Description -->
-                
+
                 <div class="product-desc text-center pt-4">
                   <a href="description.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
                   <h6 class="price">' . $row["prix"] . ' DNT</h6>
@@ -192,8 +191,6 @@ else
         </div>
 
     </div>
-    </tr>
-        </table>
   </section>
 
   <!-- ##### Shop Area End ##### -->
