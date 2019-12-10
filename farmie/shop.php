@@ -159,7 +159,7 @@ else
               <div class="single-product-area mb-50">
                 <!-- Product Thumbnail -->
                 <div class="product-thumbnail">
-                  <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"  alt="">
+                  <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"   alt="">
                   <!-- Product Tags -->
                   <span class="product-tags">SALE</span>
                   <!-- Product Meta Data -->
@@ -174,7 +174,7 @@ else
                 <!-- Product Description -->
 
                 <div class="product-desc text-center pt-4">
-                  <a href="descp.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
+                  <a href="description.php?id='.$row['id_produit'].'" class="product-title">' . $row["nom"] . '</a>
                   <h6 class="price">' . $row["prix"] . ' DNT</h6>
                 </div>
               </div>

@@ -12,7 +12,7 @@ else
 $desc= $_GET['id'];
 
 
-include '../CoolAdmin-master/inc/fonctionC.php';
+
 //  include '../CoolAdmin-master/inc/categorieC.php';
 $prod=new fonctionC();
 $listselon=$prod->afficherDesc($desc);

@@ -30,20 +30,7 @@ $l=$f->afficherpanier();
     <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
     <script src="https://kit.fontawesome.com/9a61c8c3ee.js" crossorigin="anonymous"></script>
 
-    <link href="css3/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css3/login_overlay.css" rel='stylesheet' type='text/css' />
-    <link href="css3/style6.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css3/shop.css" type="text/css" />
-    <link rel="stylesheet" href="css3/owl.carousel.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css3/owl.theme.css" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" href="css3/jquery-ui1.css">
-    <link href="css3/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css3/flexslider.css" type="text/css" media="screen" />
-    <link href="css3/style.css" rel='stylesheet' type='text/css' />
-    <link href="css3/fontawesome-all.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
-          rel="stylesheet">
+
 
 </head>
 
