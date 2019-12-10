@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58306096-8e32-4ea3-ab55-5ccd924bd325" name="Default Changelist" comment="affiche selon categorie&#10;AND PAGE DESC&#10;FONT AWSOME">
-      <change beforePath="$PROJECT_DIR$/ajouterpanier.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajouterpanier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmie/description.php" beforeDir="false" afterPath="$PROJECT_DIR$/farmie/description.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +147,7 @@
       <workItem from="1575800413806" duration="1322000" />
       <workItem from="1575808108012" duration="4396000" />
       <workItem from="1575891333992" duration="14023000" />
-      <workItem from="1575909222089" duration="241000" />
+      <workItem from="1575909222089" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1574699593814</created>

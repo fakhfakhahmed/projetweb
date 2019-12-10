@@ -12,7 +12,7 @@ else
 $desc= $_GET['id'];
 
 
-include '../CoolAdmin-master/inc/fonctionC.php';
+// include '../CoolAdmin-master/inc/fonctionC.php';
 //  include '../CoolAdmin-master/inc/categorieC.php';
 $prod=new fonctionC();
 $listselon=$prod->afficherDesc($desc);
@@ -36,7 +36,7 @@ if ($desc>0) {
 
                     </div>
                 </div>
-                
+
 
                 <!-- Product Content -->
                 <div class="col-lg-6">
@@ -50,10 +50,10 @@ if ($desc>0) {
                         <!-- In Stock -->
                         <div class="in_stock_container">
                             <div class="availability">Availability:</div>
-                            
+
                             <span>On STOCK</span>
                         </div>
-                        
+
                        ';
         }
         else{
@@ -61,10 +61,10 @@ if ($desc>0) {
                         <!-- In Stock -->
                         <div class="in_stock_container">
                             <div class="availability">Availability:</div>
-                            
+
                             <span style="color: #ff0039;">Off STOCK</span>
                         </div>
-                        
+
                        ';
         }
             echo '
@@ -82,12 +82,12 @@ if ($desc>0) {
                                     <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                                 </div>
                             </div>
-                           
+
                              <div  class="button cart_button " ><a  href="shop.php" >Add to cart </a></div>
                         </div>
 
                         <!-- Share -->
-                        
+
                     </div>
                 </div>
             </div>
