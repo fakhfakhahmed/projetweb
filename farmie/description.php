@@ -45,7 +45,7 @@ if ($desc>0) {
 
                         <div class="details_price">' . $row["prix"] . '</div>
                         ';
-        if ($row["stock"] > 0) {
+        if ($row["stock"] > 10) {
             echo '
                         <!-- In Stock -->
                         <div class="in_stock_container">
@@ -56,7 +56,18 @@ if ($desc>0) {
 
                        ';
         }
-        else{
+      else if($row["stock"] < 10) {
+            echo '
+                        <!-- In Stock -->
+                        <div class="in_stock_container">
+                            <div class="availability">Availability:</div>
+
+                            <span style="color: orange;">Last 10 items </span>
+                        </div>
+
+                       ';
+        }
+        else {
             echo '
                         <!-- In Stock -->
                         <div class="in_stock_container">
@@ -73,7 +84,11 @@ if ($desc>0) {
                         </div>
 
                         <!-- Product Quantity -->
-                        <div class="product_quantity_container">
+                      ';
+        if ($row["stock"] > 0) {
+
+        echo'
+   <div class="product_quantity_container">
                             <div class="product_quantity clearfix">
                                 <span>Qty</span>
                                 <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
@@ -82,8 +97,12 @@ if ($desc>0) {
                                     <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                                 </div>
                             </div>
+                          
 
-                             <div  class="button cart_button " ><a  href="shop.php" >Add to cart </a></div>
+                             <div  class="button cart_button disabled " ><a  href="shop.php" >Add to cart </a></div>';}
+
+        echo'
+    
                         </div>
 
                         <!-- Share -->

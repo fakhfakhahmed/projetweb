@@ -38,7 +38,7 @@ $listorod=$prod->afficherCategorie();
 
     <div class="col-lg-9">
         <div class="table100 ver2 m-b-110">
-            <table class="table table-borderless table-striped table-earning"  style="margin-left: 180px;">
+            <table  id="example" class="table table-borderless table-striped table-earning"  style="margin-left: 180px;">
                 <thead>
                 <tr>
                     <th>ID </th>
