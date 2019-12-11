@@ -18,11 +18,13 @@ class fonctionc
 
 
 				$sql="INSERT INTO client (username, nom, prenom,email , mdp,tel,dateinscri) VALUES ('$username', '$nom', '$prenom','$email','$mdp','$tel',NOW())";
+
         $sql1="select * from client where email='$email'";
 				$req1=mysqli_query($host,$sql1);
 				if(mysqli_num_rows($req1)==0)
-				{
+				{$sql2="INSERT INTO fidelite (username) VALUES ('$username')";
 				$req=mysqli_query($host,$sql);
+				$req2=mysqli_query($host,$sql2);
 				header('Location: ../../index.php');
 			}
 			else{echo'email existe';
@@ -65,7 +67,7 @@ class fonctionc
 		 }
 
 		 elseif((mysqli_num_rows($req1)==1)){
-			 echo'bloquer';
+			 header('Location: ../../erreur.php');
 
 		 }
 		 else{echo'invalide';
