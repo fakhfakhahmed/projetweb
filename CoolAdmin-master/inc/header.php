@@ -239,7 +239,7 @@ $l=$prod->afficherProduit(null,null,1);?>
                                         echo '
                                     <div class="notifi__item">
                                         <div class="bg-c1 img-cir img-40">
-                                            <i class="zmdi zmdi-email-open"></i>
+                                           <a style="color: white;" href="afficherproduit.php" <i class="zmdi zmdi-email-open"></i></a>
                                         </div>
                                         <div class="content">
                                         <a href="afficherproduit.php"><p>le produit  '.$pp["nom"].' est epuisé</p></a>
