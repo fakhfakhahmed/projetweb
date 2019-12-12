@@ -12,7 +12,13 @@
 <!--===============================================================================================-->
 
 
-<?php include 'header.php'; ?>
+<?php 
+session_start();
+if(isset($_SESSION['email']))
+ {include'headerc.php';}
+ else{include'header.php';
+
+ }?>
 	<div class="container-contact100">
 		<div class="contact100-map" style="background-image: url(img/background.jpg);"></div>
 

@@ -1,4 +1,10 @@
-<?php include 'header.php'; ?>
+<?php
+session_start();
+if(isset($_SESSION['email']))
+ {include'headerc.php';}
+ else{include'header.php';
+
+ }?>
 <style type="text/css"> @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 
 body {

@@ -117,8 +117,8 @@ $l=$f->afficherpanier();
                   </li>
                    <li><a href="#">customer Services</a>
                     <ul class="dropdown">
-                      <li><a href="Complaint.php">File a Complaint</a></li>
-                      <li><a href="HelpRequest.php">Request Assistance</a></li>
+                      <li><a href="Calert.php">File a Complaint</a></li>
+                      <li><a href="Calert.php">Request Assistance</a></li>
                       <li><a href="Contact.php">Contact</a></li>
                     </ul>
                   </li>
