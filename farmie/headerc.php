@@ -118,7 +118,7 @@ $l=$f->afficherpanier();
                       <li><a href="Contact.php">Contact</a></li>
                     </ul>
                   </li>
-              
+
                 </ul>
                 <!-- Search Icon -->
                 <div id="searchIcon">
@@ -138,8 +138,8 @@ $l=$f->afficherpanier();
 
           <!-- Search Form -->
           <div class="search-form">
-            <form action="#" method="get">
-              <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+            <form action="shop.php" method="get">
+              <input type="search" name="key" id="search" placeholder="Type keywords &amp; press enter...">
               <button type="submit" class="d-none"></button>
             </form>
             <!-- Close Icon -->
