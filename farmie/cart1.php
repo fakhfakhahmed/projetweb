@@ -8,10 +8,17 @@ if(isset($_SESSION['email']))
 
 $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
 mysqli_select_db($host,"sisagri2")or die("cannot select DB");
-$email=$_SESSION['email'];
-$sql="select * from fidelite where username='$email'";
-$req=mysqli_query($host,$sql);
-$row=mysqli_fetch_array($req);
+if(isset($_SESSION["email"])){
+    $email=$_SESSION['email'];
+    $sql="select * from fidelite where username='$email'";
+    $req=mysqli_query($host,$sql);
+    $row=mysqli_fetch_array($req);
+}
+else
+{
+    $row=0;
+}
+
 
 $mais=new fonctionC();
 $listemais=$mais->afficherpanier();
@@ -119,28 +126,28 @@ $listemais=$mais->afficherpanier();
                         <a href="shop.php"><button class="btn btn-block btn-light">Continue Shopping</button></a>
                     </div>
                     <div class="col-sm-12 col-md-6 text-right">
-                        <form action="creeCommande.php" method="post">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!--                            <input type="hidden" name="uemail" value="php $_SESSION['uemail'] ?>">-->
-                            <input type="hidden" name="uemail" value="<?php  echo $_SESSION['email'] ?>">
-=======
-<!--                            <input type="hidden" name="uemail" value="<php $_SESSION['uemail'] ?>">-->
-                            <input type="hidden" name="uemail" value="<?php echo $_SESSION['email']?>">
->>>>>>> 7ff23ec43572768e86522cef940aac4476fc47ea
-=======
-<!--                            <input type="hidden" name="uemail" value="<php $_SESSION['uemail'] ?>">-->
-                            <input type="hidden" name="uemail" value="<?php echo $_SESSION['email']?>">
->>>>>>> 7ff23ec43572768e86522cef940aac4476fc47ea
-                            <?php
+                        <?php
+                        if(isset($_SESSION["email"]))
+                        {
+                            echo '
+                            <form action="creeCommande.php" method="post">
+
+                            <input type="hidden" name="uemail" value="'.$_SESSION['email'].'">';
                             if($listemais->rowCount()!=0)
                             {
                                 echo '
                             <button type="submit" class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
                             ';
                             }
-                            ?>
+                            echo '
                         </form>
+                            ';
+                        }
+                        else
+                        {
+                            echo '<button type="" class="btn btn-lg btn-block btn-success text-uppercase"><a href="signin.php">Checkout</a></button>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
