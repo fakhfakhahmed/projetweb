@@ -121,8 +121,13 @@ $listemais=$mais->afficherpanier();
                     <div class="col-sm-12 col-md-6 text-right">
                         <form action="creeCommande.php" method="post">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!--                            <input type="hidden" name="uemail" value="php $_SESSION['uemail'] ?>">-->
                             <input type="hidden" name="uemail" value="<?php  echo $_SESSION['email'] ?>">
+=======
+<!--                            <input type="hidden" name="uemail" value="<php $_SESSION['uemail'] ?>">-->
+                            <input type="hidden" name="uemail" value="<?php echo $_SESSION['email']?>">
+>>>>>>> 7ff23ec43572768e86522cef940aac4476fc47ea
 =======
 <!--                            <input type="hidden" name="uemail" value="<php $_SESSION['uemail'] ?>">-->
                             <input type="hidden" name="uemail" value="<?php echo $_SESSION['email']?>">
