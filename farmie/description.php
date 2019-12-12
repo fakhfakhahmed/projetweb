@@ -100,8 +100,9 @@ if ($desc>0) {
                                 </div>
                             </div>
 
-
-                             <div  class="button cart_button disabled " ><a  href="../CoolAdmin-master/ajouterpanier.php" >Add to cart </a></div>';}
+                        <form style="display: inline-block;" action="../CoolAdmin-master/ajouterpanier.php" method="post">
+                            <input type="hidden" name="id_produit" value="'.$row["id_produit"].'">
+                             <button type="submit"><div class="button cart_button disabled "><a>Add to cart </a></div></button></form> ';}
 
         echo'
 
