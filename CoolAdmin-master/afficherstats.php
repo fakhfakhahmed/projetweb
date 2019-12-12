@@ -10,6 +10,8 @@
 		$sql="SELECT dateinscri , COUNT('dateinscri') FROM client group by dateinscri ";
 
 		$req=mysqli_query($host,$sql);
+		$sql1="select * from client  ";
+	  $req1=mysqli_query($host,$sql1);
 
 
 
@@ -25,6 +27,7 @@
               <tr>
                 <th>date</th>
                 <th>accounts created</th>
+								 <th>percentage (%)</th>
 
 
               </tr>
@@ -37,6 +40,7 @@
                       <tr>
                         <td>'. $row[0].'</td>
                         <td>'. $row[1].'</td>
+												 <td>'. round(($row[1]/mysqli_num_rows($req1)*100),2).'</td>
 
 
 
