@@ -8,10 +8,16 @@ else{include'header.php';
 
 }
 $bdd = new PDO('mysql:host=localhost;dbname=sisagri2', 'root', '');
-$produitparpage =9;
+$produitparpage =5;
 if(isset($_GET["cat"]))
 {
     $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
+}
+else if(isset($_GET['key']))
+{
+    $key= $_GET['key'];
+    $produittotalreq = $bdd->query('SELECT * FROM produits where key_word like '%$key%'' );
+
 }
 else {
     $produittotalreq = $bdd->query('SELECT * FROM produits');
@@ -31,22 +37,22 @@ $depart = ($pageCourante-1)*$produitparpage;
 
 
 $prod=new fonctionC();
-if(isset($_GET['cat']))
-{
-
-    $cat= $_GET['cat'];
-    $listorod=$prod->afficherProduit($cat,null);
-}
-else if(isset($_GET['key']))
-{
-
-    $key= $_GET['key'];
-    $listorod=$prod->afficherProduit(null,$_GET['key']);
-}
-else
-{
+//if(isset($_GET['cat']))
+//{
+//
+//    $cat= $_GET['cat'];
+//    $listorod=$prod->afficherProduit($cat,null);
+//}
+//else if(isset($_GET['key']))
+//{
+//
+//    $key= $_GET['key'];
+//    $listorod=$prod->afficherProduit(null,$_GET['key']);
+//}
+//else
+//{
     $listorod=$prod->afficherProduit();
-}
+//}
 
 
   $listcat=$prod->afficherCategorie();
@@ -90,7 +96,7 @@ else
           <div class="shop-filters mb-30 d-flex align-items-center justify-content-between">
             <!-- Product Show -->
             <div class="product-show">
-              <h6>Showing 1–9 of <?php echo $listorod->rowCount() ?> results</h6>
+              <h6>Showing 1–<?php echo $produitparpage ?>  of <?php echo $listorod->rowCount() ?> results</h6>
 
             </div>
 
@@ -170,6 +176,11 @@ else
             if(isset($_GET["cat"]))
             {
               $videos = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"].' LIMIT '.$depart.','.$produitparpage);
+            }
+            else if(isset($_GET['key'])) {
+
+
+                $videos = $bdd->query('SELECT * FROM produits where where key_word like '.$_GET['key'].' LIMIT '.$depart.','.$produitparpage);
             }
             else
             {
