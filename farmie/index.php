@@ -238,69 +238,12 @@ if(isset($_SESSION['email']))
       <div class="row">
 
         <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p1.jpg" alt="">
-              <!-- Product Tags -->
-              <span class="product-tags">Hot</span>
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-            <div class="product-desc text-center pt-4">
-              <a href="#" class="product-title">Strawberry</a>
-              <h6 class="price">$17.99</h6>
-            </div>
-          </div>
-        </div>
+
 
         <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p2.jpg" alt="">
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-            <div class="product-desc text-center pt-4">
-              <a href="#" class="product-title">Baked Breads</a>
-              <h6 class="price">$9.99</h6>
-            </div>
-          </div>
-        </div>
+
 
         <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="500ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p3.jpg" alt="">
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-            <div class="product-desc text-center pt-4">
-              <a href="#" class="product-title">Prime Beef</a>
-              <h6 class="price">$59.99</h6>
-            </div>
-          </div>
-        </div>
 
         <!-- Single Product Area -->
         <div class="col-12 col-sm-6 col-lg-3">
