@@ -78,7 +78,7 @@ form button[type=submit] {
 
 <div id="bg"></div>
 
-<form action="SubmitRequest.php" method="POST">
+<form action="inc/SubmitRequest.php" method="POST">
     
   <label for="">Full Name:</label>
   <input type="text" name="FullName" placeholder="Enter Full Name" class="FullName" required>
