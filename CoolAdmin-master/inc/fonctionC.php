@@ -201,7 +201,6 @@ class fonctionC
             // ta3ti num fatoura lkol produit fel panier
             $sql="insert into sisagri2.produits_commande (uemail, innoviceNumber, prodId, qty) values ('$uemail','$x','$pId','$qty')";
             $sql4="update sisagri2.produits set stock =stock-'$qty' where id_produit='$pId' ";
-            echo $sql4;
             $db=config::getConnexion();
             try
             {
@@ -219,6 +218,7 @@ class fonctionC
 
         $fid=$this->getSoldeF($uemail)["solde"];
             $due=$v+10;
+            echo 'due'.$v;
             $dis=0;
         if($fid<$v)
         {
@@ -242,9 +242,10 @@ class fonctionC
         {
             echo 'error :'.$e->getMessage();
         }
-
+        echo 'salem'.$dis;
         // aaa ta3mel commande fiha num el fatoura
         $sql2="insert into sisagri2.commande (uemail, dueAmount, innoNumber, totalQty,discount) values ('$uemail','$v','$x','$n','$dis')";
+        echo $sql2;
         try
         {
             $db->query($sql2);
