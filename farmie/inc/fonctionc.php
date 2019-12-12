@@ -22,7 +22,7 @@ class fonctionc
         $sql1="select * from client where email='$email'";
 				$req1=mysqli_query($host,$sql1);
 				if(mysqli_num_rows($req1)==0)
-				{$sql2="INSERT INTO fidelite (username) VALUES ('$username')";
+				{$sql2="INSERT INTO fidelite (username) VALUES ('$email')";
 				$req=mysqli_query($host,$sql);
 				$req2=mysqli_query($host,$sql2);
 				header('Location: ../../index.php');
