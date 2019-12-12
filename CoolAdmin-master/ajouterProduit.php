@@ -1,7 +1,7 @@
 <?php
 include 'inc/header.php';
 include 'inc/db.php';
-include "inc/fonctionC.php";
+
 $c=new fonctionC();
 $lc=$c->afficherCategorie();
 ?>

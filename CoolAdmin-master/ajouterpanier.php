@@ -1,5 +1,5 @@
 <?php
-include "inc/fonctionC.php";
+
 include "inc/panier.php";
 
 if( isset($_POST["id_produit"]))

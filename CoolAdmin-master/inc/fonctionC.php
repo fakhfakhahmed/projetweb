@@ -365,7 +365,7 @@ class fonctionC
         }
         if ($key!=null)
         {
-            $sql=$sql." where key_word like '%$key%'";
+            $sql=$sql." where key_word like '%$key%' limit 4";
         }
         if($dd!=null)
         {

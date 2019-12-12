@@ -113,88 +113,16 @@ if ($desc>0) {
                 </div>
             </div>
 
-            <div class="row description_row">
-                <div class="col">
-                    <div class="description_title_container">
-                        <div class="description_title">Review</div>
-
-                    </div>
-                    <div class="description_text">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
-                    </div>
-                </div>
-            </div>
+    
         </div>
     </div>
 ';
-        }
+
 
 
 
 ?>
-<section class="relateproduct bgwhite p-t-45 p-b-138">
-    <div class="container">
-        <div class="sec-title p-b-60">
-            <h3 style="font-size: xx-large; color: black;" class="m-text5 t-center">
-                Produits similaires
-            </h3>
-        </div>
 
-        <!-- Slide2 -->
-        <div class="wrap-slick2">
-            <div class="slick2">
-                <?php
-
-                    $key= $row['key_word'];
-                    $listorod=$prod->afficherProduit(null,$key);
-
-
-                foreach ($listorod as $row )
-                {
-                    echo '
-              <div class="item-slick2 p-l-15 p-r-15">
-    						<!-- Block2 -->
-    						<div class="block2">
-    							<div class="block2-img wrap-pic-w of-hidden pos-relative ">
-    								<img width="90px" height="220px" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"   alt="IMG-PRODUCT" >
-
-    								<div class="block2-overlay trans-0-4">
-    									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-    										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-    										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-    									</a>
-
-    									<div class="block2-btn-addcart w-size1 trans-0-4">
-    										<!-- Button -->
-    										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-    											Add to Cart
-    										</button>
-    									</div>
-    								</div>
-    							</div>
-
-    							<div class="block2-txt p-t-20">
-
-    								<a href="product-detail.php?idprod='.$row["id_produit"].'" class="block2-name dis-block s-text3 p-b-5">
-    									'.$row["nom"].'
-    								</a>
-
-    								<span class="block2-price m-text6 p-r-5">
-    									'.$row["prix"].' TND
-    								</span>
-    							</div>
-    						</div>
-    					</div>
-              ';
-                }}
-                ?>
-
-
-            </div>
-        </div>
-
-    </div>
-</section>
 <section class="our-products-area section-padding-100">
     <div class="container">
         <div class="row">
@@ -207,6 +135,7 @@ if ($desc>0) {
                 </div>
             </div>
         </div>
+        <div class="row">
         <?php
 
                     $key= $row['key_word'];
@@ -215,7 +144,9 @@ if ($desc>0) {
 
                 foreach ($listorod as $row )
                 {
-        <div class="row">
+                    echo'
+                
+        
 
             <!-- Single Product Area -->
 
@@ -230,9 +161,9 @@ if ($desc>0) {
                 <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="700ms">
                     <!-- Product Thumbnail -->
                     <div class="product-thumbnail">
-                        <img src="img/bg-img/p4.jpg" alt="">
+                        <img src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" alt="">
                         <!-- Product Tags -->
-                        <span class="product-tags bg-danger">Sale</span>
+                       
                         <!-- Product Meta Data -->
                         <div class="product-meta-data">
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
@@ -242,12 +173,18 @@ if ($desc>0) {
                     </div>
                     <!-- Product Description -->
                     <div class="product-desc text-center pt-4">
-                        <a href="#" class="product-title">Pure Honey</a>
-                        <h6 class="price"><span>$29.99</span> $19.99</h6>
+                        <a href="product-detail.php?idprod='.$row["id_produit"].'" class="product-title">'.$row["nom"].'</a>
+                        <h6 class="price"><span> </span> '.$row["prix"].' TND</h6>
                     </div>
                 </div>
             </div>
 
+        
+                ';
+                }
+                }
+        }
+                ?>
         </div>
 
         <div class="row">
