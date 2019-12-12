@@ -142,7 +142,7 @@ if ($desc>0) {
                     $listorod=$prod->afficherProduit(null,$key);
 
 
-                foreach ($listorod as $row )
+                foreach ($listorod as $fff )
                 {
                     echo'
                 
@@ -161,20 +161,20 @@ if ($desc>0) {
                 <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="700ms">
                     <!-- Product Thumbnail -->
                     <div class="product-thumbnail">
-                        <img src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '" alt="">
+                        <img src="' . '../CoolAdmin-master/images/' . $fff["img_1"] . '" alt="">
                         <!-- Product Tags -->
                        
                         <!-- Product Meta Data -->
                         <div class="product-meta-data">
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
+                            <a href="description.php?id='.$fff['id_produit'].'" data-toggle="tooltip" data-placement="top" title="View"><i class="fas fa-eye"></i></a>
                         </div>
                     </div>
                     <!-- Product Description -->
                     <div class="product-desc text-center pt-4">
-                        <a href="product-detail.php?idprod='.$row["id_produit"].'" class="product-title">'.$row["nom"].'</a>
-                        <h6 class="price"><span> </span> '.$row["prix"].' TND</h6>
+                        <a href="product-detail.php?idprod='.$fff["id_produit"].'" class="product-title">'.$fff["nom"].'</a>
+                        <h6 class="price"><span> </span> '.$fff["prix"].' TND</h6>
                     </div>
                 </div>
             </div>
