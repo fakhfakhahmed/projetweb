@@ -142,3 +142,6 @@ if ($stmt = $mysqli->prepare('SELECT * FROM complaint/* ORDER BY FullName*/ LIMI
 	background-color: #518acb;
 }
 </style>
+<?php
+include 'inc/end.php';
+?>
