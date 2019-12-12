@@ -4,10 +4,10 @@ require 'config2.php';
 ?>
 
 <html>
-<head><title>Base De DonneÃ¨s!</title>
+<head><title>Print Complaints</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-<style></style>
+
 </head>
 <body body onload="window.print()">
 	<center>
