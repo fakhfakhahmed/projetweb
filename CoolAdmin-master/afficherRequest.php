@@ -46,7 +46,7 @@ foreach ($listResquest as $row)
                     <input type="hidden" id="nbc" name="nbc" value="'.$row["PremiumMember"].'">
                         <input style="background: none; border: none; text-decoration: underline;" type="submit" name="supprimer" value="Delete">
                         <input type="hidden" value="'.$row['ID_Request'].'" name="ID_Request">
-                  
+
                 </form>
             </td>
         </tr>

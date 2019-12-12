@@ -4,7 +4,7 @@ include 'inc/ComplaintC.php';
 $Cmplnt = new ComplaintC();
 $listComplaint = $Cmplnt->afficherComplaint();
 ?>
-<?<?php 
+<?<?php
 // Below is optional, remove if you have already connected to your database.
 $mysqli = mysqli_connect('localhost', 'root', '', 'sisagri2');
 // Get the total number of records from our table "students".
@@ -19,7 +19,7 @@ if ($stmt = $mysqli->prepare('SELECT * FROM complaint/* ORDER BY FullName*/ LIMI
 	// Calculate the page to get the results we need from our table.
 	$calc_page = ($page - 1) * $num_results_on_page;
 	$stmt->bind_param('ii', $calc_page, $num_results_on_page);
-	$stmt->execute(); 
+	$stmt->execute();
 	// Get the results...
 	$result = $stmt->get_result();
 	$stmt->close();
@@ -100,7 +100,7 @@ if ($stmt = $mysqli->prepare('SELECT * FROM complaint/* ORDER BY FullName*/ LIMI
 	<?php endif; ?>
 </ul>
 <?php endif; ?>
-   <div>	
+   <div>
    	<a style="margin: 10px 50px;" href="CPrint.php">Print</a></div>
    	<div>
 	<a style="margin: 10px 50px;" href="CsearchF.php">Search</a>

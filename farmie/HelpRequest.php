@@ -14,7 +14,7 @@ body {
   width: 100%;
   height: 100%;
   background: url(http://phase11.net.w0137ba4.kasserver.com/wp-content/uploads/2015/02/service.jpg) no-repeat center center fixed;
-  background-size: cover; 
+  background-size: cover;
 }
 
 form {
@@ -79,21 +79,21 @@ form button[type=submit] {
 <div id="bg"></div>
 
 <form action="SubmitRequest.php" method="POST">
-    
+
   <label for="">Full Name:</label>
   <input type="text" name="FullName" placeholder="Enter Full Name" class="FullName" required>
   <label for="">Adress:</label>
   <input type="text" name="Adress" placeholder="Enter Your Home Adress" class="Adress" required>
   <label for="">Email:</label>
-  <input type="text" name="Email" placeholder="Enter Email" class="Email" required>  
+  <input type="text" name="Email" placeholder="Enter Email" class="Email" required>
   <label for="">Phone Number:</label>
-    <input type="text" name="PhoneNumber"  placeholder="Enter Phone Number" class="PhoneNumber" required>  
+    <input type="text" name="PhoneNumber"  placeholder="Enter Phone Number" class="PhoneNumber" required>
   <label for="">Name the product you're having trouble with:</label>
   <input type="text" name="ProductName" placeholder="Enter Product Name" class="ProductName" required>
   <label for=""><br>Purchase Date:</label>
   <input type="date" min="2019-11-25" max="2030-08-26" name="PurchaseDate" required>
   <p>Are you a Premium Member?:</p>
-   
+
       <input type="radio" name="PremiumMember" class="radio1"  id="contactChoice1"
        name="Premium" value="yes">
       <label for="contactChoice1">Yes<br></label>
@@ -103,9 +103,9 @@ form button[type=submit] {
       <label for="contactChoice2">No</label>
       <script  src="https://www.paypal.com/sdk/js?client-id=sb"></script>
       <script>paypal.Buttons().render('body');</script>
-    
+
   <button type="submit" value="Submit">Ask for help! </button>
-    
+
 
 </form>
 

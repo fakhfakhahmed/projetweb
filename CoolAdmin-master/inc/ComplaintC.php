@@ -3,7 +3,7 @@
 include "./config.php";
 class ComplaintC
 {
-  
+
     function afficherComplaint()
     {
 

@@ -3,7 +3,7 @@
 include "./config.php";
 class RequestC
 {
-  
+
     function afficherRequest()
     {
 
@@ -33,5 +33,5 @@ class RequestC
                 die('Erreur: '.$e->getMessage());
             }
         }
-       
+
 }
