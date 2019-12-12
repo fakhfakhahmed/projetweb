@@ -64,7 +64,7 @@ if ($desc>0) {
                         <div class="in_stock_container">
                             <div class="availability">Availability:</div>
 
-                            <span style="color: orange;">Last 10 items </span>
+                            <span style="color: orange;">Last items </span>
                         </div>
 
                        ';

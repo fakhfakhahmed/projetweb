@@ -12,11 +12,6 @@ $produitparpage =3;
 if(isset($_GET["cat"]))
 {
     $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
-}
-else if(isset($_GET["search"]))
-{
-    $key= $_GET["search"];
-    $produittotalreq = $bdd->query('SELECT * FROM produits where key_word like '%$key%'' );
 
 }
 else {
@@ -36,6 +31,7 @@ $depart = ($pageCourante-1)*$produitparpage;
 
 
 
+
 $prod=new fonctionC();
 //if(isset($_GET['cat']))
 //{
@@ -51,7 +47,7 @@ $prod=new fonctionC();
 //}
 //else
 //{
-    $listorod=$prod->afficherProduit();
+
 //}
 
 
@@ -138,7 +134,7 @@ $prod=new fonctionC();
           <!-- Single Widget Area -->
           <div class="single-widget-area">
             <!-- Title -->
-            <h5 class="widget-title">Catagories</h5>
+            <h5 class="widget-title">Categories</h5>
 
               <ul>
                   <li><a href="shop.php">all Products</a></li>
@@ -173,19 +169,16 @@ $prod=new fonctionC();
 
           <div class="row">
               <?php
-            if(isset($_GET["cat"]))
-            {
-              $videos = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"].' LIMIT '.$depart.','.$produitparpage);
-            }
-            else if(isset($_GET['key'])) {
+              if(isset($_GET["cat"]))
+              {
+                  $videos = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"].' LIMIT '.$depart.','.$produitparpage);
 
+              }
 
-                $videos = $bdd->query('SELECT * FROM produits where where key_word like '.$_GET['key'].' LIMIT '.$depart.','.$produitparpage);
-            }
-            else
-            {
-              $videos = $bdd->query('SELECT * FROM produits  ORDER BY id_produit DESC LIMIT '.$depart.','.$produitparpage);
-            }
+              else
+              {
+                  $videos = $bdd->query('SELECT * FROM produits  ORDER BY id_produit DESC LIMIT '.$depart.','.$produitparpage);
+              }
 
 
 
@@ -204,14 +197,21 @@ $prod=new fonctionC();
                 <div class="product-thumbnail">
                   <img style="width: 500px; height: 300px;" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"   alt="">
                   <!-- Product Tags -->
-                  <span class="product-tags">SALE</span>
+                 
                   <!-- Product Meta Data -->
                   <div class="product-meta-data">
                     <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
+                    ';
+                          if($row["stock"]>0){
+                      echo'
                     <form style="display: inline-block;" action="../CoolAdmin-master/ajouterpanier.php" method="post">
                                       <input type="hidden" name="id_produit" value="'.$row["id_produit"].'">
                                       <button type="submit"><i class="icon_cart_alt"></i></button>
-                                      </form>                    <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
+                                      </form>                   
+                  ';
+                          }
+                      echo'
+                   <a href="description.php?id='.$row['id_produit'].'" data-toggle="tooltip" data-placement="top" title="view"><i class="fas fa-eye"></i></a>
                   </div>
                 </div>
                 <!-- Product Description -->
@@ -235,18 +235,20 @@ $prod=new fonctionC();
 
     </div>
         <nav aria-label="Page navigation example">
-        <ul class="pagination">
+        <ul style="margin-left: 300px;" class="pagination">
             <?php
             for($i=1;$i<=$pagesTotales;$i++) {
                 if($i == $pageCourante) {
                     echo '<li class="page-item"><a  class="page-link">'.$i.'</a></li> ';
                 } else {
                     echo '<li class="page-item"><a class="page-link" href="shop.php?page='.$i.'" >'.$i.'</a> </li>';
+
                 }
             }
             ?>
         </ul>
         </nav>
+
 
         </div>
   </section>
