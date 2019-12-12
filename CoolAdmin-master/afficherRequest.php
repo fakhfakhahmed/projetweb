@@ -56,3 +56,7 @@ foreach ($listResquest as $row)
 
 ?>
 </table>
+<?php
+include 'inc/end.php';
+?>
+
