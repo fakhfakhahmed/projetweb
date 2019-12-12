@@ -85,27 +85,27 @@ foreach ($listorod as $row) {
                                               <div class="modal-body mx-3">
                                               
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom  </label>
                                                 <input type="text" id="orangeForm-name" name="nom" class="form-control validate" value="'.$row["nom"].'" >
                                               </div>
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Prenom </label>
                                                 <input type="text" id="orangeForm-name" name="prenom" class="form-control validate" value="'.$row["prenom"].'" >
                                               </div>
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Etat </label>
                                                 <input type="text" id="orangeForm-name" name="etat" class="form-control validate" value="'.$row["etat"].'" >
                                               </div>
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Matricule </label>
                                                 <input type="text" id="orangeForm-name" name="matricule" class="form-control validate" value="'.$row["matricule"].'" >
                                               </div>
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Adresse </label>
                                                 <input type="text" id="orangeForm-name" name="adresse" class="form-control validate" value="'.$row["adresse"].'" >
                                               </div>
                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom Categorie </label>
+                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Tel </label>
                                                 <input type="text" id="orangeForm-name" name="tel" class="form-control validate" value="'.$row["tel"].'" >
                                               </div>
                                               <input type="hidden" name="id" value="'.$row["id_livreur"].'">
