@@ -1,5 +1,13 @@
 <?php
-include 'inc/header.php'
+include 'inc/header.php';
+$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+  mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+  $sql="select * from client  ";
+
+  $req=mysqli_query($host,$sql);
 ?>
 
 
@@ -39,8 +47,9 @@ include 'inc/header.php'
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <h2 class="number">10,368</h2>
-                        <span class="desc">members online</span>
+                        <span class="desc">Accounts number:</span>
+                        <h2 class="number"><?php echo mysqli_num_rows($req);?>  </h2>
+
                         <div class="icon">
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
@@ -88,38 +97,12 @@ include 'inc/header.php'
                     <div class="recent-report2">
                         <h3 class="title-3">recent reports</h3>
                         <div class="chart-info">
-                            <div class="chart-info__left">
-                                <div class="chart-note">
-                                    <span class="dot dot--blue"></span>
-                                    <span>products</span>
-                                </div>
-                                <div class="chart-note">
-                                    <span class="dot dot--green"></span>
-                                    <span>Services</span>
-                                </div>
-                            </div>
-                            <div class="chart-info-right">
-                                <div class="rs-select2--dark rs-select2--md m-r-10">
-                                    <select class="js-select2" name="property">
-                                        <option selected="selected">All Properties</option>
-                                        <option value="">Products</option>
-                                        <option value="">Services</option>
-                                    </select>
-                                    <div class="dropDownSelect2"></div>
-                                </div>
-                                <div class="rs-select2--dark rs-select2--sm">
-                                    <select class="js-select2 au-select-dark" name="time">
-                                        <option selected="selected">All Time</option>
-                                        <option value="">By Month</option>
-                                        <option value="">By Day</option>
-                                    </select>
-                                    <div class="dropDownSelect2"></div>
+                            <?php include('afficherstats.php'); ?>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="recent-report__chart">
-                            <canvas id="recent-rep2-chart"></canvas>
-                        </div>
+
                     </div>
                     <!-- END RECENT REPORT 2             -->
                 </div>

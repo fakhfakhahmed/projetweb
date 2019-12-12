@@ -114,6 +114,21 @@ class fonctionC
         }
 
     }
+
+    function getSoldeF($un)
+        {
+            $sql="select * from fidelite where username='$un'";
+            $db=config::getConnexion();
+            try
+            {
+                return $db->query($sql)->fetch();
+            }
+            catch (Exception $e)
+            {
+                echo 'error :'.$e->getMessage();
+            }
+        }
+
     function afficherpanier()
     {
         $ip_a=gethostbyname(gethostname());
@@ -199,8 +214,36 @@ class fonctionC
 
 
         }
+        //getsolde fid
+
+        $fid=$this->getSoldeF($uemail)["solde"];
+            $due=$v+10;
+            $dis=0;
+        if($fid<$v)
+        {
+            $v=$v-$fid;
+            $dis=$fid;
+            $fid=0;
+        }
+        else
+        {
+            $fid=$fid-$v;
+            $dis=$v;
+            $v=0;
+        }
+        $sql5="update fidelite set solde='$fid' where username='$uemail'";
+            $db=config::getConnexion();
+        try
+        {
+            $db->query($sql5);
+        }
+        catch (Exception $e)
+        {
+            echo 'error :'.$e->getMessage();
+        }
+
         // aaa ta3mel commande fiha num el fatoura
-        $sql2="insert into sisagri2.commande (uemail, dueAmount, innoNumber, totalQty) values ('$uemail','$v','$x','$n')";
+        $sql2="insert into sisagri2.commande (uemail, dueAmount, innoNumber, totalQty,discount) values ('$uemail','$v','$x','$n','$dis')";
         try
         {
             $db->query($sql2);
@@ -213,6 +256,15 @@ class fonctionC
         try
         {
             $db->query($sql3);
+        }
+        catch (Exception $e)
+        {
+            echo 'error :'.$e->getMessage();
+        }
+        $sql4="update fidelite set solde=solde+'$due'*0.08 where username='$uemail'";
+        try
+        {
+            $db->query($sql4);
         }
         catch (Exception $e)
         {
@@ -397,7 +449,7 @@ function autheadmin($client)
 
 
 
-  $sql="select * from admin  where ((email='$email') and(mdp='$mdp')) ";
+  $sql="select * from admin  where ((email='$email') and(mdp='$mdp')) and (etat=0) ";
 
   $req=mysqli_query($host,$sql);
 
@@ -415,22 +467,31 @@ if (mysqli_num_rows($req)==1)
   $_SESSION['lastname']=$row[2];
   $_SESSION['tel']=$row[5];
  header('Location: ../../index.php');
-
-
-
-
-
  }
-
-
- else{echo'invalide';
+ else{header('Location: ../../erreur.php');
 
  }
 
 }
 
 
+function supprimeradmin($client)
+{
+      $username=$client->getusername();
 
+
+      $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+      mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+
+
+      $sql="DELETE FROM `admin` WHERE `admin`.`username` = '$username'";
+
+      $req=mysqli_query($host,$sql);
+
+
+
+}
 
 
 	function supprimerclient($client)
@@ -450,6 +511,21 @@ if (mysqli_num_rows($req)==1)
 
 
 	}
+  function bloqueradmin($client,$etat)
+  {
+        $email=$client->getemail();
+
+
+        $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+        mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+
+        $sql="UPDATE `admin` SET `etat` = '$etat' WHERE `admin`.`email` = '$email';";
+
+       $req=mysqli_query($host,$sql);
+
+
+
+  }
 
 	function bloquerclient($client,$etat)
 	{

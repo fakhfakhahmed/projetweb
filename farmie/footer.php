@@ -171,6 +171,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
 <script src="js3/jquery-2.2.3.min.js"></script>
+<script src="js3/imagezoom.js"></script>
 <!-- newsletter modal -->
 <!--search jQuery-->
 
@@ -191,7 +192,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- //end-smooth-scrolling -->
 
 <!-- single -->
-<script src="js3/imagezoom.js"></script>
+
 <!-- single -->
 <!-- script for responsive tabs -->
 

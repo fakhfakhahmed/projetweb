@@ -7,6 +7,28 @@ else{include'header.php';
 
 
 }
+$bdd = new PDO('mysql:host=localhost;dbname=sisagri2', 'root', '');
+$produitparpage =9;
+if(isset($_GET["cat"]))
+{
+    $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
+}
+else {
+    $produittotalreq = $bdd->query('SELECT * FROM produits');
+}
+
+$produittotal = $produittotalreq->rowCount();
+$pagesTotales = ceil($produittotal/$produitparpage);
+if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales) {
+    $_GET['page'] = intval($_GET['page']);
+    $pageCourante = $_GET['page'];
+} else {
+    $pageCourante = 1;
+}
+$depart = ($pageCourante-1)*$produitparpage;
+
+
+
 
 $prod=new fonctionC();
 if(isset($_GET['cat']))
@@ -142,17 +164,27 @@ else
 
         <!-- Shop Products Area -->
         <div class="col-12 col-md-8 col-lg-9">
-          <div class="row">
 
-            <!-- Single Product Area -->
+          <div class="row">
               <?php
+            if(isset($_GET["cat"]))
+            {
+              $videos = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"].' LIMIT '.$depart.','.$produitparpage);
+            }
+            else
+            {
+              $videos = $bdd->query('SELECT * FROM produits  ORDER BY id_produit DESC LIMIT '.$depart.','.$produitparpage);
+            }
+
+
+
               if ($listorod->rowCount()==0)
               {
                   echo "No Product found !";
               }
 
 
-                  foreach ($listorod as $row) {
+                  foreach ($videos as $row) {
 
                       echo '
             <div class="col-12 col-sm-6 col-lg-4">
@@ -191,6 +223,21 @@ else
         </div>
 
     </div>
+        <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <?php
+            for($i=1;$i<=$pagesTotales;$i++) {
+                if($i == $pageCourante) {
+                    echo '<li class="page-item"><a  class="page-link">'.$i.'</a></li> ';
+                } else {
+                    echo '<li class="page-item"><a class="page-link" href="shop.php?page='.$i.'" >'.$i.'</a> </li>';
+                }
+            }
+            ?>
+        </ul>
+        </nav>
+
+        </div>
   </section>
 
   <!-- ##### Shop Area End ##### -->

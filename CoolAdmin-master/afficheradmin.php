@@ -56,13 +56,18 @@ include 'inc/header.php';
             		<th>prénom</th>
             		<th>email</th>
             		<th>numéro telephone</th>
-
+								
+							<?php	if ($_SESSION['type']=='sadmin')
+								{echo'<th>supprimer</th>
+								<th>bloquer/debloquer</th>
+								';}
+							?>
               </tr>
             </thead>
             <tbody>
               <?php
                   while($row=mysqli_fetch_array($req,MYSQLI_NUM))
-                    {
+                    {       if($row[7]==0){$faza="bloquer";}else{$faza='debloquer';}
               				echo'
                       <tr>
                         <td>'. $row[0].'</td>
@@ -70,6 +75,24 @@ include 'inc/header.php';
                         <td>'. $row[2].'</td>
                         <td>'. $row[4].'</td>
                         <td>'. $row[5].'</td>
+
+
+ '; if ($_SESSION['type']=='sadmin'){echo'
+	 <td> <form action="inc/views/supprimeradmin.php" method="get">
+	 					<input type="hidden" id="username" name="username" value="'.$row["0"].'">
+	 					<input class="au-btn au-btn-icon au-btn--green" type="submit" value="supprimer">
+	 			</form></td>
+	 	<td> <form action="inc/views/bloqueradmin.php" method="get">
+
+
+						 <input type="hidden" id="email" name="email" value="'.$row["4"].'">
+
+						 <input type="hidden" id="etat" name="etat" value="'.$row["7"].'">
+
+						 <input class="au-btn au-btn-icon au-btn--green" type="submit" value='.$faza.'>
+				 </form></td>
+				 ';}echo'
+
 
 
                       </tr>';

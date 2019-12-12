@@ -6,6 +6,13 @@ if(isset($_SESSION['email']))
 
  }
 
+$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+$email=$_SESSION['email'];
+$sql="select * from fidelite where username='$email'";
+$req=mysqli_query($host,$sql);
+$row=mysqli_fetch_array($req);
+
 $mais=new fonctionC();
 $listemais=$mais->afficherpanier();
 ?>
@@ -84,7 +91,15 @@ $listemais=$mais->afficherpanier();
                             <td></td>
                             <td></td>
                             <td>Shipping</td>
-                            <td class="text-right">10 TND</td>
+                            <td class="text-right"><?php if($total>0){echo'10 TND';}else{echo '0 TND';}?></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>fid</td>
+                            <td class="text-right"><?php if($total>0){echo $row['1'];}else{echo '0 TND';}?></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -92,7 +107,7 @@ $listemais=$mais->afficherpanier();
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong><?php echo $total+10 ." TND"?></strong></td>
+                            <td class="text-right"><strong><?php if($total+10-$row['1']>0) {echo $total+10-$row['1'] ." TND";} else{echo '0 TND';}?></strong></td>
                         </tr>
                         </tbody>
                     </table>
@@ -105,8 +120,13 @@ $listemais=$mais->afficherpanier();
                     </div>
                     <div class="col-sm-12 col-md-6 text-right">
                         <form action="creeCommande.php" method="post">
+<<<<<<< HEAD
 <!--                            <input type="hidden" name="uemail" value="php $_SESSION['uemail'] ?>">-->
-                            <input type="hidden" name="uemail" value="moemen@aa.aa">
+                            <input type="hidden" name="uemail" value="<?php  echo $_SESSION['email'] ?>">
+=======
+<!--                            <input type="hidden" name="uemail" value="<php $_SESSION['uemail'] ?>">-->
+                            <input type="hidden" name="uemail" value="<?php echo $_SESSION['email']?>">
+>>>>>>> 7ff23ec43572768e86522cef940aac4476fc47ea
                             <?php
                             if($listemais->rowCount()!=0)
                             {
