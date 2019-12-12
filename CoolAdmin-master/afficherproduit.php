@@ -1,6 +1,6 @@
 <?php
 include 'inc/header.php';
-include 'inc/fonctionC.php';
+
 $prod=new fonctionC();
 $listorod=$prod->afficherProduit();
 
