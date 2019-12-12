@@ -1,6 +1,6 @@
 <?php
 
-include "./config.php";
+include "./config2.php";
 class RequestC
 {
 
