@@ -102,7 +102,7 @@ if ($desc>0) {
 
                         <form style="display: inline-block;" action="../CoolAdmin-master/ajouterpanier.php" method="post">
                             <input type="hidden" name="id_produit" value="'.$row["id_produit"].'">
-                             <button type="submit"><div class="button cart_button disabled "><a>Add to cart </a></div></button></form> ';}
+                             <button type="submit" style="background:white ;border:0px;"><div class="button cart_button disabled "><a>Add to cart </a></div></button></form> ';}
 
         echo'
 
@@ -114,7 +114,7 @@ if ($desc>0) {
                 </div>
             </div>
 
-    
+
         </div>
     </div>
 ';
@@ -146,8 +146,8 @@ if ($desc>0) {
                 foreach ($listorod as $fff )
                 {
                     echo'
-                
-        
+
+
 
             <!-- Single Product Area -->
 
@@ -164,7 +164,7 @@ if ($desc>0) {
                     <div class="product-thumbnail">
                         <img src="' . '../CoolAdmin-master/images/' . $fff["img_1"] . '" alt="">
                         <!-- Product Tags -->
-                       
+
                         <!-- Product Meta Data -->
                         <div class="product-meta-data">
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
@@ -180,7 +180,7 @@ if ($desc>0) {
                 </div>
             </div>
 
-        
+
                 ';
                 }
                 }

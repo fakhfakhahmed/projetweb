@@ -1,7 +1,7 @@
 <?php
 
 include "inc/panier.php";
-
+include 'inc/fonctionC.php';
 if( isset($_POST["id_produit"]))
 {
     $pC=new fonctionC();
