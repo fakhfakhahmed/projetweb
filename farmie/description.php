@@ -19,6 +19,7 @@ $listselon=$prod->afficherDesc($desc);
 
 
 
+
 ?>
 <?php
 if ($desc>0) {
@@ -45,6 +46,7 @@ if ($desc>0) {
 
                         <div class="details_price">' . $row["prix"] . '</div>
                         ';
+
         if ($row["stock"] > 10) {
             echo '
                         <!-- In Stock -->
@@ -56,7 +58,7 @@ if ($desc>0) {
 
                        ';
         }
-      else if($row["stock"] < 10) {
+      else if(($row["stock"] > 0) and ($row["stock"]<=10)) {
             echo '
                         <!-- In Stock -->
                         <div class="in_stock_container">
@@ -128,5 +130,71 @@ if ($desc>0) {
         }
 
 }
+
 ?>
+<section class="relateproduct bgwhite p-t-45 p-b-138">
+    <div class="container">
+        <div class="sec-title p-b-60">
+            <h3 style="font-size: xx-large; color: black;" class="m-text5 t-center">
+                Produits similaires
+            </h3>
+        </div>
+
+        <!-- Slide2 -->
+        <div class="wrap-slick2">
+            <div class="slick2">
+                <?php
+                if(isset($_GET['key']))
+                {
+
+                    $key= $_GET['key'];
+                    $listorod=$prod->afficherProduit(null,$key);
+                }
+
+                foreach ($listorod as $row )
+                {
+                    echo '
+              <div class="item-slick2 p-l-15 p-r-15">
+    						<!-- Block2 -->
+    						<div class="block2">
+    							<div class="block2-img wrap-pic-w of-hidden pos-relative ">
+    								<img width="90px" height="220px" src="' . '../CoolAdmin-master/images/' . $row["img_1"] . '"   alt="IMG-PRODUCT" >
+
+    								<div class="block2-overlay trans-0-4">
+    									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+    										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+    										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+    									</a>
+
+    									<div class="block2-btn-addcart w-size1 trans-0-4">
+    										<!-- Button -->
+    										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+    											Add to Cart
+    										</button>
+    									</div>
+    								</div>
+    							</div>
+
+    							<div class="block2-txt p-t-20">
+
+    								<a href="product-detail.php?idprod='.$row["id_produit"].'" class="block2-name dis-block s-text3 p-b-5">
+    									'.$row["nom"].'
+    								</a>
+
+    								<span class="block2-price m-text6 p-r-5">
+    									'.$row["prix"].' TND
+    								</span>
+    							</div>
+    						</div>
+    					</div>
+              ';
+                }
+                ?>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
 <?php include'footer.php';?>
