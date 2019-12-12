@@ -13,7 +13,7 @@ $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
   $sql1="select * from produits";
   $req1=mysqli_query($host,$sql1);
 
-  $sql2="select sum(dueAmount) from commande";
+  $sql2="select sum(dueAmount) from commande where Status=1 ";
   $req2=mysqli_query($host,$sql2);
   $row=mysqli_fetch_array($req2,MYSQLI_NUM);
 
