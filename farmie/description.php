@@ -99,12 +99,12 @@ if ($desc>0) {
                                     <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                                 </div>
                             </div>
-                          
+
 
                              <div  class="button cart_button disabled " ><a  href="shop.php" >Add to cart </a></div>';}
 
         echo'
-    
+
                         </div>
 
                         <!-- Share -->
@@ -129,7 +129,7 @@ if ($desc>0) {
 ';
         }
 
-}
+
 
 ?>
 <section class="relateproduct bgwhite p-t-45 p-b-138">
@@ -144,12 +144,10 @@ if ($desc>0) {
         <div class="wrap-slick2">
             <div class="slick2">
                 <?php
-                if(isset($_GET['key']))
-                {
 
-                    $key= $_GET['key'];
+                    $key= $row['key_word'];
                     $listorod=$prod->afficherProduit(null,$key);
-                }
+
 
                 foreach ($listorod as $row )
                 {
@@ -188,7 +186,7 @@ if ($desc>0) {
     						</div>
     					</div>
               ';
-                }
+                }}
                 ?>
 
 

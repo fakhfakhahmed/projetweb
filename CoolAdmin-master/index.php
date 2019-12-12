@@ -6,8 +6,18 @@ $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
 
 
   $sql="select * from client  ";
-
   $req=mysqli_query($host,$sql);
+  $sql3="select * from admin  ";
+  $req3=mysqli_query($host,$sql3);
+
+  $sql1="select * from produits";
+  $req1=mysqli_query($host,$sql1);
+
+  $sql2="select sum(dueAmount) from commande";
+  $req2=mysqli_query($host,$sql2);
+  $row=mysqli_fetch_array($req2,MYSQLI_NUM);
+
+
 ?>
 
 
@@ -47,8 +57,18 @@ $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <span class="desc">Accounts number:</span>
+                        <span class="desc">clients number:</span>
                         <h2 class="number"><?php echo mysqli_num_rows($req);?>  </h2>
+
+                        <div class="icon">
+                            <i class="zmdi zmdi-accounts"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="statistic__item">
+                      <span class="desc">admins number:</span>
+                        <h2 class="number"><?php echo mysqli_num_rows($req3);?> </h2>
 
                         <div class="icon">
                             <i class="zmdi zmdi-account-o"></i>
@@ -57,17 +77,9 @@ $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <h2 class="number">388,688</h2>
-                        <span class="desc">items sold</span>
-                        <div class="icon">
-                            <i class="zmdi zmdi-shopping-cart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="statistic__item">
-                        <h2 class="number">1,086</h2>
-                        <span class="desc">this week</span>
+                      <span class="desc">total products</span>
+                        <h2 class="number"><?php echo mysqli_num_rows($req1);?></h2>
+
                         <div class="icon">
                             <i class="zmdi zmdi-calendar-note"></i>
                         </div>
@@ -75,7 +87,7 @@ $host=mysqli_connect("localhost", "root", "")or die("cannot connect");
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="statistic__item">
-                        <h2 class="number">$1,060,386</h2>
+                        <h2 class="number"><?php echo $row['0'];?> TND</h2>
                         <span class="desc">total earnings</span>
                         <div class="icon">
                             <i class="zmdi zmdi-money"></i>

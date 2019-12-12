@@ -8,14 +8,14 @@ else{include'header.php';
 
 }
 $bdd = new PDO('mysql:host=localhost;dbname=sisagri2', 'root', '');
-$produitparpage =5;
+$produitparpage =3;
 if(isset($_GET["cat"]))
 {
     $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
 }
-else if(isset($_GET['key']))
+else if(isset($_GET["search"]))
 {
-    $key= $_GET['key'];
+    $key= $_GET["search"];
     $produittotalreq = $bdd->query('SELECT * FROM produits where key_word like '%$key%'' );
 
 }
