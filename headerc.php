@@ -7,6 +7,15 @@ $l=$f->afficherpanier();
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/product.css">
+    <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
+    <script src="https://kit.fontawesome.com/9a61c8c3ee.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,19 +27,6 @@ $l=$f->afficherpanier();
   <link rel="icon" href="img/core-img/logo.png">
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Sublime project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="styles/product.css">
-    <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
-    <script src="https://kit.fontawesome.com/9a61c8c3ee.js" crossorigin="anonymous"></script>
-
-
 
 </head>
 
@@ -108,23 +104,25 @@ $l=$f->afficherpanier();
                   </li>
                   <li><a href="shop.php">Our Product</a></li>
                   <li><a href="farming-practice.php">Farming Practice</a></li>
-                  <li><a href="#">Client</a>
+                  <li><a href="#">Mon compte</a>
                     <ul class="dropdown">
-                      <li><a href="signup.php">sign up</a></li>
-                      <li><a href="signin.php">sign in</a></li>
-                      <li><a href="afficherconsultation.php">Consulter livraison</a></li>
+                      <li><a href="logout.php">logout</a></li>
+                      <li><a href="modifierclients.php">modifier</a></li>
+                      <li><a href="afficherconsultation.php">Consulter Livraison </a></li>
+
                     </ul>
                   </li>
                   <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <!-- Search Icon -->
-                    <div id="searchIcon">
-                      <i class="icon_search" aria-hidden="true"></i>
-                    </div>
+                <div id="searchIcon">
+                  <i class="icon_search" aria-hidden="true"></i>
+                </div>
                 <!-- Cart Icon -->
                 <div id="cartIcon">
                   <a href="#">
                       <a href="../farmie/cart1.php"><i class="icon_cart_alt" aria-hidden="true"></i><span class="cart-quantity"><?php echo $l->rowcount(); ?></span></a>
+
                   </a>
                 </div>
               </div>
@@ -134,9 +132,9 @@ $l=$f->afficherpanier();
 
           <!-- Search Form -->
           <div class="search-form">
-            <form action="shop.php" method="get">
-              <input type="search" name="key" id="search" placeholder="Type keywords &amp; press enter...">
-                  <button type="submit" class="d-none"></button>
+            <form action="#" method="get">
+              <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+              <button type="submit" class="d-none"></button>
             </form>
             <!-- Close Icon -->
             <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
