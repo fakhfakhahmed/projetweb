@@ -200,7 +200,7 @@ class fonctionC
             $n=$n+$qty;
             // ta3ti num fatoura lkol produit fel panier
             $sql="insert into sisagri2.produits_commande (uemail, innoviceNumber, prodId, qty) values ('$uemail','$x','$pId','$qty')";
-            $sql4="update sisagri2.produits set quantite =quantite-'$qty' where id_produit='$pId' ";
+            $sql4="update sisagri2.produits set stock =stock-'$qty' where id_produit='$pId' ";
             $db=config::getConnexion();
             try
             {
