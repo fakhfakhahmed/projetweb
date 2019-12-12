@@ -118,7 +118,19 @@ while($row = $result->fetch_assoc()){
     <td><?php echo $row['ProductName']; ?></td>
     <td><?php echo $row['PurchaseDate']; ?></td>
     <td><?php echo $row['PremiumMember']; ?></td>
-    <td><?php echo ' <a href="supprimerRequest.php" style="background: none; border: none; text-decoration: underline;">Delete</a> ' ?></td>
+    <td><?php echo '  <form action="supprimerRequest.php" method="POST">
+                    <input type="hidden" id="ID_Request" name="ID_Request" value="'.$row["ID_Request"].'">
+                    <input type="hidden" id="FullName" name="FullName" value="'.$row["FullName"].'">
+                    <input type="hidden" id="dat" name="dat" value="'.$row["Adress"].'">
+                    <input type="hidden" id="pre" name="pre" value="'.$row["Email"].'">
+                    <input type="hidden" id="nbc" name="nbc" value="'.$row["PhoneNumber"].'">
+                    <input type="hidden" id="nbc" name="nbc" value="'.$row["ProductName"].'">
+                    <input type="hidden" id="nbc" name="nbc" value="'.$row["PurchaseDate"].'">
+                    <input type="hidden" id="nbc" name="nbc" value="'.$row["PremiumMember"].'">
+                        <input style="background: none; border: none; text-decoration: underline;" type="submit" name="supprimer" value="Delete">
+                        <input type="hidden" value="'.$row['ID_Request'].'" name="ID_Request">
+                  
+                </form> ' ?></td>
     </tr>
     <?php
 }
