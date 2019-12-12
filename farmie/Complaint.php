@@ -27,7 +27,7 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" action="inc/submitComplaint.php" method="POST">
+			<form class="contact100-form validate-form" action="submitComplaint.php" method="POST">
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
 					<input class="input100" type="text" name="FullName" placeholder="Enter Full Name">
