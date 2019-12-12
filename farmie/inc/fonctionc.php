@@ -70,7 +70,7 @@ class fonctionc
 			 header('Location: ../../erreur.php');
 
 		 }
-		 else{echo'invalide';
+		 else{header('Location: ../../erreur2.php');
 
 		 }
 

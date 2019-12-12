@@ -3,8 +3,11 @@
 if(!(isset($_SESSION['mail'])))
 {
   header('location:login.php');
-}?>
 
+}?>
+<?php   include 'fonctionC.php';
+$prod=new fonctionC();
+$l=$prod->afficherProduit(null,null,1);?>
 <html lang="en">
 
 <head>
@@ -228,38 +231,23 @@ if(!(isset($_SESSION['mail'])))
                                     </form>
                                 </div>
                             </div>
-                            <div class="header-button-item has-noti js-item-menu">
+                            <div class="header-button-item <?php if($l->rowCount()>0){echo 'has-noti';}?> js-item-menu">
                                 <i class="zmdi zmdi-notifications"></i>
                                 <div class="notifi-dropdown js-dropdown">
                                     <?php
-                                    foreach ($l as $f) {
+                                    foreach ($l as $pp) {
                                         echo '
-                                    <div class="notifi__title">
-                                        <p></p>
-                                    </div>
-                                    
-
                                     <div class="notifi__item">
                                         <div class="bg-c1 img-cir img-40">
                                             <i class="zmdi zmdi-email-open"></i>
                                         </div>
                                         <div class="content">
-                                        ';
-                                    if ($f["stock"] > 0) {
-                                        echo '
-                                            <p>le produit de <?php?></p>
+                                        <a href="afficherproduit.php"><p>le produit  '.$pp["nom"].' est epuisé</p></a>
                                       
                                         </div>
                                     </div>
-                             
-                                  
-                                    
-                                    ';
-                                    }
-                                    else{
-                                        echo '
-                                        ne notif found';}
-                                    }?>
+                                        ';}
+                                        ?>
                                 </div>
                             </div>
                             <div class="header-button-item mr-0 js-sidebar-btn">

@@ -8,14 +8,14 @@ else{include'header.php';
 
 }
 $bdd = new PDO('mysql:host=localhost;dbname=sisagri2', 'root', '');
-$produitparpage =5;
+$produitparpage =3;
 if(isset($_GET["cat"]))
 {
     $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
 }
-else if(isset($_GET['key']))
+else if(isset($_GET["search"]))
 {
-    $key= $_GET['key'];
+    $key= $_GET["search"];
     $produittotalreq = $bdd->query('SELECT * FROM produits where key_word like '%$key%'' );
 
 }
@@ -96,7 +96,7 @@ $prod=new fonctionC();
           <div class="shop-filters mb-30 d-flex align-items-center justify-content-between">
             <!-- Product Show -->
             <div class="product-show">
-              <h6>Showing 1–<?php echo $produitparpage ?>  of <?php echo $listorod->rowCount() ?> results</h6>
+              <h6>Showing 1–<?php echo $produitparpage ?>  of <?php echo $produittotal?> results</h6>
 
             </div>
 
@@ -189,7 +189,7 @@ $prod=new fonctionC();
 
 
 
-              if ($listorod->rowCount()==0)
+              if ($videos->rowCount()==0)
               {
                   echo "No Product found !";
               }

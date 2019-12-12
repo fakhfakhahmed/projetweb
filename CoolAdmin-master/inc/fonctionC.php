@@ -355,7 +355,7 @@ class fonctionC
         }
 
     }
-    function afficherProduit($id_cat=null,$key=null)
+    function afficherProduit($id_cat=null,$key=null,$dd=null)
     {
 
         $sql="select * from produits";
@@ -366,6 +366,10 @@ class fonctionC
         if ($key!=null)
         {
             $sql=$sql." where key_word like '%$key%'";
+        }
+        if($dd!=null)
+        {
+            $sql="select * from sisagri2.produits where stock =0";
         }
         $db = config::getConnexion();
         try
