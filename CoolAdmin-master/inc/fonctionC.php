@@ -40,7 +40,7 @@ class fonctionC
     function afficherCom()
     {
 
-        $sql="select * from sisagri2.produits_commande ";
+        $sql="select * from sisagri2.commande";
         $db = config::getConnexion();
         try
         {
@@ -54,7 +54,7 @@ class fonctionC
     }
     function suppcom($orderId)
     {
-        $sql="DELETE FROM sisagri2.produits_commande WHERE orderId LIKE '$orderId' ";
+        $sql="DELETE FROM sisagri2.commande WHERE orderId LIKE '$orderId' ";
 
         $db = config::getConnexion();
         try
@@ -66,9 +66,9 @@ class fonctionC
             die('Erreur: '.$e->getMessage());
         }
     }
-  function modifierCommande($orderId,$uemail,$innoviceNumber,$prodId,$qty,$status)
+  function modifierCommande($orderId,$status1)
     {
-        $sql= "update sisagri2.produits_commande set uemail='$uemail', innoviceNumber='$innoviceNumber', prodId='$prodId', qty='$qty', status='$status' where orderId='$orderId'";
+        $sql= "update sisagri2.commande set Status='$status1'  where orderId='$orderId'";
         $db = config::getConnexion();
         try
         {

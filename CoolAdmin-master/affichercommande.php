@@ -40,10 +40,12 @@ $list=$com->afficherCom();
                 <th>#</th>
                 <th>Order ID</th>
                 <th>User email</th>
-                <th>Innovice number </th>
-                <th class="text-right">Id Produit</th>
+                <th>prix a payer </th>
+                <th class="text-right">Numero facture</th>
                 <th class="text-right">Quantite</th>
+                <th class="text-right">Date de commande </th>
                 <th class="text-right">Status</th>
+                <th class="text-right">Discount</th>
 
                 <th></th>
                 <th></th>
@@ -59,10 +61,12 @@ $list=$com->afficherCom();
                 <td> '.$x.'</td>
                 <td> '.$row["orderId"].'</td>
                 <td> '.$row["uemail"].'</td>
-                <td> '.$row["innoviceNumber"].'</td>
-                <td> '.$row["prodId"].'</td>
-                <td> '.$row["qty"].'</td>
-                <td> '.$row["status"].'</td>
+                <td> '.$row["dueAmount"].'</td>
+                <td> '.$row["innoNumber"].'</td>
+                <td> '.$row["totalQty"].'</td>
+                <td> '.$row["orderDate"].'</td>
+                <td> '.$row["Status"].'</td>
+                <td> '.$row["discount"].'</td>
 
 
 
@@ -81,40 +85,21 @@ $list=$com->afficherCom();
                                                 <span aria-hidden="true">&times;</span>
                                               </button>
                                             </div>
-                                            <script src="../CoolAdmin-master/js/verif.js"></script>
+                                            
+                                           
 
                                             <form action="modifiercomm.php" method="post" name="f" onsubmit="return verif()">
                                               <div class="modal-body mx-3">
 
-                                              <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Order ID</label>
-                                                <input type="text" id="orangeForm-name" name="orderId" class="form-control validate" value="'.$row["orderId"].'"  >
-                                              </div>
-                                              <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">User Email</label>
-                                                <input type="text" id="orangeForm-name" name="uemail" class="form-control validate" value="'.$row["uemail"].'"  >
-
-                                              </div>
-                                              <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-email">Numero facture</label>
-                                                <input type="text" id="orangeForm-email" name="innoviceNumber" class="form-control validate" value="'.$row["innoviceNumber"].'"  >
-                                              </div>
-                                               <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Id produit</label>
-                                                <input type="text" id="orangeForm-name" name="prodId" class="form-control validate" value="'.$row["prodId"].'"  >
-                                              </div>
-
-                                              <div class="md-form mb-5">
-                                                <label data-error="wrong" data-success="right" for="orangeForm-name">Quantite</label>
-                                                <input type="text" id="orangeForm-name" name="qty" class="form-control validate" value="'.$row["qty"].'" >
-                                              </div>
-
+                                            
+                                              
                                               <div class="md-form mb-5">
                                                 <label data-error="wrong" data-success="right" for="orangeForm-name">Status</label>
-                                                <input type="text" id="orangeForm-name" name="status1" class="form-control validate" value="'.$row["status"].'" >
+                                                <input type="text" id="moemen" name="status1" class="form-control validate" value="'.$row["Status"].'" >
                                               </div>
+                                                
 
-                                              <input type="hidden" name="id_com" class="uemail" value="'.$row["uemail"].'">
+                                              <input type="hidden" name="orderId" class="orderId" value="'.$row["orderId"].'">
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
                                           <input type="submit" class="btn btn-primary" value="Modifier">
@@ -128,7 +113,7 @@ $list=$com->afficherCom();
 
                                   </td>
 <td>
-                  <form action="supprimercom.php" method="post">
+                  <form action="supprimercom.php" method="post" onsubmit="return verif()">
                                       <input type="hidden" id="supp" name="supp" value="'.$row["orderId"].'">
                                       <input type="submit"  value="supprimer" class="btn-sm btn-danger">
 
