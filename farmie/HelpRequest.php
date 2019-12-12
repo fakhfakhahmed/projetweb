@@ -100,7 +100,7 @@ form button[type=submit] {
 
       <input type="radio" class="radio1" name="PremiumMember" id="contactChoice2"
        name="Premium" value="no">
-      <label for="contactChoice2">No</label>
+      <label for="contactChoice2"><a href="Cpayment.php"> No</a></label>
       <script  src="https://www.paypal.com/sdk/js?client-id=sb"></script>
       <script>paypal.Buttons().render('body');</script>
 
