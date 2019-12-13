@@ -106,6 +106,7 @@ $l=$f->afficherpanier();
                   <li><a href="farming-practice.php">Farming Practice</a></li>
                   <li><a href="#">Mon compte</a>
                     <ul class="dropdown">
+                      <li><a href="dclient.php">mes données</a></li>
                       <li><a href="logout.php">logout</a></li>
                       <li><a href="modifierclients.php">modifier</a></li>
 

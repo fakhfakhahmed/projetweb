@@ -54,12 +54,14 @@ class fonctionc
 			$sql1="select * from client  where ((email='$email') and(mdp='$mdp') and (etat=1))";
 
 			$req1=mysqli_query($host,$sql1);
-
+  $row=mysqli_fetch_array($req1,MYSQLI_NUM);
 		if ((mysqli_num_rows($req)==1))
 		 {echo'connected';
        session_start();
 			 $_SESSION['email']=$email;
 			 $_SESSION['password']=$mdp;
+			 $_SESSION['name']=$row['1'];
+			 $_SESSION['lastname']=$row['3'];
 			 header('Location: ../../index.php');
 
 
