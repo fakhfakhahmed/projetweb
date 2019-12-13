@@ -24,9 +24,9 @@
 
 					<div class="col-12">
 						<button type="submit" class="btn famie-btn">Sign in</button>
-						<button  class="btn famie-btn" >
-							<a href="forgotpass.php">forgot password ?</a>
-						</button>
+						<!-- <button  class="btn famie-btn" > -->
+							<!-- <a href="forgotpass.php">forgot password ?</a> -->
+						<!-- </button> -->
 					</div>
 
 

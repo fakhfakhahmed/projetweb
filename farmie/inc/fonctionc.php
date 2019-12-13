@@ -62,6 +62,7 @@ class fonctionc
 			 $_SESSION['password']=$mdp;
 			 $_SESSION['name']=$row['1'];
 			 $_SESSION['lastname']=$row['3'];
+			
 			 header('Location: ../../index.php');
 
 
