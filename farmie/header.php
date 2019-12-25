@@ -112,7 +112,7 @@ $l=$f->afficherpanier();
                     <ul class="dropdown">
                       <li><a href="signup.php">sign up</a></li>
                       <li><a href="signin.php">sign in</a></li>
-
+                      <li><a href="afficherconsultation.php">Consulter livraison</a></li>
                     </ul>
                   </li>
                    <li><a href="#">customer Services</a>
