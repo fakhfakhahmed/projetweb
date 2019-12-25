@@ -5,7 +5,7 @@ if(!(isset($_SESSION['mail'])))
   header('location:login.php');
 
 }?>
-<?php   include 'fonctionC.php';
+<?php   include 'inc/fonctionC.php';
 $prod=new fonctionC();
 $l=$prod->afficherProduit(null,null,1);?>
 <html lang="en">
@@ -114,6 +114,41 @@ $l=$prod->afficherProduit(null,null,1);?>
                             </li>
                         </ul>
 
+                    <li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fas fa-table"></i>Livreur
+                            <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                        </a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <li>
+                                <a href="afficherlivreur.php">
+                                    <i class="fas fa-table"></i>Afficher</a>
+                            </li>
+                            <li>
+                                <a href="ajouterlivreur.php">
+                                    <i class="fas fa-table"></i>Ajouter</a>
+                            </li>
+                        </ul>
+
+                    <li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fas fa-table"></i>Livraison
+                            <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                        </a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <li>
+                                <a href="afficherlivraison.php">
+                                    <i class="fas fa-table"></i>Afficher</a>
+                            </li>
+                            <li>
+                                <a href="ajouterLivraison.php">
+                                    <i class="fas fa-table"></i>Ajouter</a>
+                            </li>
+                        </ul>
 
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
