@@ -18,6 +18,50 @@ $Message = $_POST['Message'];
      	$stmt = $conn->prepare("insert into Complaint(FullName, Adress, Email, PhoneNumber, Message) values(?, ?, ?, ?, ?)");
      	$stmt->bind_param("sssis", $FullName, $Adress, $Email, $PhoneNumber, $Message);
      	$stmt->execute();
+	    /////////////////////////////////////
+
+              require 'send/PHPMailerAutoload.php';
+              require 'send/credential.php';
+
+              $mail = new PHPMailer;
+
+             //  $mail->SMTPDebug = 4;                           // Enable verbose debug output
+
+              $mail->isSMTP();                                      // Set mailer to use SMTP
+              $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+              $mail->SMTPAuth = true;                               // Enable SMTP authentication
+              $mail->Username = EMAIL;                 // SMTP username
+              $mail->Password = PASS;                           // SMTP password
+              $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+              $mail->Port = 587;                                    // TCP port to connect to
+
+              $mail->setFrom(EMAIL,'sisagri');
+              $mail->addAddress($_POST['Email']);   // Add a recipient
+
+              $mail->addReplyTo(EMAIL);
+              // print_r($_FILES['file']); exit;
+              /*for ($i=0; $i < count($_FILES['file']['tmp_name']) ; $i++) { 
+                $mail->addAttachment($_FILES['file']['tmp_name'][$i], $_FILES['file']['name'][$i]);    // Optional name
+              }*/
+              $mail->isHTML(true);                                  // Set email format to HTML
+
+              $mail->Subject = 'We recived your complaint and we are currently treating the problem '; 
+              //$mail->Body    = '<div style="border:2px solid blue;"> thanks for ordering &transaction id='.$tId.'</br> &quantite'.$objtrans->getQuantity().'<b></br> amount</b>'.$objtrans->getAmount().'</div>';
+
+              $mail->Body ='  Your complaint has been sent We will get in touch with you shortly' ;
+
+
+              $mail->AltBody = ' thanks for Reaching to us ';
+
+              if(!$mail->send()) {
+                  echo 'Message could not be sent.';
+                  echo 'Mailer Error: ' . $mail->ErrorInfo;
+              } else {
+                  echo ' </br> commande confirmation Message has been sent </br>';
+              }
+
+
+      //////////////////////////////////// 
      	header("Location: Complaint.php?Complaintsent");
      	$stmt->close();
      	$conn->close();

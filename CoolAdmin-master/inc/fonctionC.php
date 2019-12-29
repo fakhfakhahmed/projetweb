@@ -1,6 +1,5 @@
 <?php
-
-include "config.php";
+include 'config.php';
 class fonctionC
 {
   function ajouterCom($com)
@@ -455,7 +454,7 @@ function autheadmin($client)
 
 
 
-  $sql="select * from admin  where ((email='$email') and(mdp='$mdp')) and (etat=0) ";
+  $sql="select * from admin  where ((email='$email') and(mdp='$mdp')) ";
 
   $req=mysqli_query($host,$sql);
 
@@ -558,6 +557,209 @@ function supprimeradmin($client)
         {
             $list=$db->query($sql);
             return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function afficher_livraison($client)
+	{
+		$username=$client->getusername();
+		$nom=$client->getNom();
+		$prenom=$client->getPrenom();
+		$mdp=$client->getmdp();
+		$email=$client->getemail();
+		$tel=$client->gettel();
+
+		$host=mysqli_connect("localhost", "root", "")or die("cannot connect");
+		mysqli_select_db($host,"sisagri2")or die("cannot select DB");
+		$sql="select date_depart,date_arrive,orderld from livraison,(select * from client where (email='$email')  and (etat=0)) as tab  where livraison.username=tab.username order by date_arrive ASC";
+		$req=mysqli_query($host,$sql);
+		return $req;
+	 	
+	}
+function ajouterLivreur($livreur)
+    {
+        $sql= " INSERT INTO livreur (id_livreur, nom, prenom, etat, matricule, adresse, tel) VALUES
+         (:id, :nom, :prenom, :etat , :matricule, :adresse, :tel)";
+         $db = config::getConnexion();
+        try
+        {
+            $req=$db->prepare($sql);
+
+
+            $id_livreur=$livreur->getid_livreur();
+            $nom=$livreur->getnom();
+            $prenom=$livreur->getprenom();
+            $etat=$livreur->getetat();
+            $matricule=$livreur->getmatricule();
+            $adresse=$livreur->getadresse();
+            $tel=$livreur->gettel();
+
+            $req->bindValue(':id',$id_livreur);
+            $req->bindValue(':nom',$nom);
+            $req->bindValue(':prenom',$prenom);
+            $req->bindValue(':etat',$etat);
+            $req->bindValue(':matricule',$matricule);
+            $req->bindValue(':adresse',$adresse);
+            $req->bindValue(':tel',$tel);
+
+            $req->execute();
+
+        }
+        catch (Exception $e)
+        {
+            echo 'Erreur: '.$e->getMessage();
+        }
+
+    }
+    function afficherLivreur()
+    {
+
+        $sql="select * from livreur ";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+
+    function afficherLivreurdispo()
+    {
+
+        $sql="SELECT * from sisagri2.livreur WHERE livreur.etat='0'";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+
+    function suppLivreur($id_livreur)
+    {
+        $sql="DELETE FROM sisagri2.`livreur` WHERE id_livreur='$id_livreur' ";
+        echo $sql;
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function modifierLivreur($id_livreur,$nom,$prenom,$etat,$matricule,$adresse,$tel)
+    {
+        $sql="UPDATE sisagri2.livreur set nom='$nom', prenom='$prenom', etat='$etat', matricule='$matricule',adresse='$adresse',tel='$tel' where id_livreur='$id_livreur'";
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+
+    function ajouterLivraison($livraison)
+    {
+        $sql= " INSERT INTO livraison(date_depart, date_arrive,username ,id_livreur,orderld) VALUES
+         (:date_depart, :date_arrive, :id_client, :id_livreur, :id_commande )";
+         $db = config::getConnexion();
+        try
+        {
+            $req=$db->prepare($sql);
+
+            //$id_livraison=$livraison->getid_livraison();
+            $date_depart=$livraison->getdate_depart();
+            $date_arriver=$livraison->getdate_arrive();
+            $id_client=$livraison->getid_client();
+            $id_livreur=$livraison->getid_livreur();
+            $id_commande=$livraison->getid_commande();
+            
+            //$req->bindValue(':id_livraison',$id_livraison);
+            $req->bindValue(':date_depart',$date_depart);
+            $req->bindValue(':date_arrive',$date_arriver);
+            $req->bindValue(':id_client',$id_client);
+            $req->bindValue(':id_livreur',$id_livreur);
+            $req->bindValue(':id_commande',$id_commande);
+            
+
+            $req->execute();
+
+        }
+        catch (Exception $e)
+        {
+            echo 'Erreur: '.$e->getMessage();
+        }
+
+    }
+    function afficherLivraison()
+    {
+
+        $sql="select * from livraison order by date_arrive ASC ";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function afficherClient()
+    {
+
+        $sql="SELECT * from sisagri2.client";
+        $db = config::getConnexion();
+        try
+        {
+            $list=$db->query($sql);
+            return $list;
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+
+
+    function suppLivraison($id_livraison)
+    {
+        $sql="DELETE FROM sisagri2.`livraison` WHERE id_livraison='$id_livraison' ";
+        echo $sql;
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
+        }
+        catch (Exception $e)
+        {
+            die('Erreur: '.$e->getMessage());
+        }
+    }
+    function modifierLivraison($id_livraison,$date_depart,$date_arriver,$id_client,$id_livreur,$id_commande)
+    {
+        $sql="UPDATE sisagri2.livraison set date_depart='$date_depart', date_arrive='$date_arriver',username='$id_client',id_livreur='$id_livreur',orderld='$id_commande' where id_livraison='$id_livraison'";
+        $db = config::getConnexion();
+        try
+        {
+            $db->query($sql);
         }
         catch (Exception $e)
         {
