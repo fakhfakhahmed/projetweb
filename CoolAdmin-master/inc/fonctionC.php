@@ -676,8 +676,7 @@ function ajouterLivreur($livreur)
 
     function ajouterLivraison($livraison)
     {
-        $sql= " INSERT INTO livraison(date_depart, date_arrive,username ,id_livreur,orderld) VALUES
-         (:date_depart, :date_arrive, :id_client, :id_livreur, :id_commande )";
+        $sql= " INSERT INTO sisagri2.livraison(date_depart, date_arrive, username ,id_livreur, orderld) VALUES (:date_depart, :date_arrive, :id_client, :id_livreur, :id_commande )";
          $db = config::getConnexion();
         try
         {
