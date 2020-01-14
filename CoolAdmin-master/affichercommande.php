@@ -95,7 +95,7 @@ $list=$com->afficherCom();
                                               
                                               <div class="md-form mb-5">
                                                 <label data-error="wrong" data-success="right" for="orangeForm-name">Status</label>
-                                                <input type="text" id="moemen" name="status1" class="form-control validate" value="'.$row["Status"].'" >
+                                                <input type="number" min="0" max="1" id="moemen" name="status1" class="form-control validate" value="'.$row["Status"].'" >
                                               </div>
                                                 
 
