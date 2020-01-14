@@ -8,12 +8,17 @@ else{include'header.php';
 
 }
 $bdd = new PDO('mysql:host=localhost;dbname=sisagri2', 'root', '');
-$produitparpage =3;
+$produitparpage =6;
 if(isset($_GET["cat"]))
 {
     $produittotalreq = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"]);
 
 }
+//if(isset($_GET["key"]))
+//{
+//    $produittotalreq = $bdd->query('SELECT * FROM produits where key_word like '.$_GET["key"]);
+//
+//}
 else {
     $produittotalreq = $bdd->query('SELECT * FROM produits');
 }
@@ -103,7 +108,7 @@ $prod=new fonctionC();
                   <a href="#"><i class="fa fa-list-ul"></i></a>
               </div>
           </div>
-        </div>
+        </div>produits
       </div>
 
       <div class="row">
@@ -174,6 +179,11 @@ $prod=new fonctionC();
                   $videos = $bdd->query('SELECT * FROM produits where id_categorie='.$_GET["cat"].' LIMIT '.$depart.','.$produitparpage);
 
               }
+//              if(isset($_GET["key"]))
+//              {
+//                  $videos = $bdd->query('SELECT * FROM produits where key_word like '.$_GET["key"].' LIMIT '.$depart.','.$produitparpage);
+//
+//              }
 
               else
               {
